@@ -1,1 +1,61 @@
+/*TITLES*/
 
+.title {
+    margin: 0;
+    padding: 15px;
+
+    color: white;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.591);
+    background: linear-gradient(to bottom, #e6f2de 0%,#3f9e00 28%,#3f9e00 28%,#61c419 81%,#b4e391 100%);
+
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title-vista{
+    padding: 12px;
+
+    color: white;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.591);
+    background: linear-gradient(to bottom, #e6f2de 0%,#3f9e00 28%,#3f9e00 28%,#61c419 81%,#b4e391 100%);
+
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*SUBTITLES*/
+
+.subtitle{
+    margin: 15px;
+    padding: 0;
+
+    color: #61c419;
+    
+    font-size: x-large;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*TEXT*/
+
+.text{
+    margin: 15px;
+    padding: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*UTIL*/
+
+.content{
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.spacing{
+    margin: 15px;
+}
