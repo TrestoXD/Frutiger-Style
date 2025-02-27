@@ -66,7 +66,7 @@
 
     color: white;
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    background: linear-gradient(to bottom, #ffffff70 0%,#5c77b170 28%,#5c77b170 28%,#88a3da70 81%,#4175cf70 100%);
+    background: linear-gradient(to bottom, #f7faff6d 0%,#4e73926d 12%,#4e73926d 28%,#134e816d 88%,#b8d1f06d 100%);
 
     border-radius: 4px;
     border-bottom: 1px solid rgb(107, 107, 107);
@@ -151,7 +151,7 @@
     margin: 15px;
     padding: 0;
 
-    color: #4175cf70;
+    color: #7492c670;
     text-shadow: 0px 0px 10px rgba(142, 178, 236, 0.438);
 
     font-size: x-large;
@@ -207,6 +207,22 @@
 
     background-color: white;
     
+}
+
+.content-inside-7{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+
+    outline: 9px solid rgba(212, 239, 255, 0.475);
+
+    box-shadow: 0px 0px 0px 10px rgba(169, 169, 169, 0.454);
+
+    border-radius: 6px;
+
+    background-color: white;
+    
+    backdrop-filter: blur(3px);
 }
 
 .content-inside-xp{
