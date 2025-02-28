@@ -1,0 +1,7 @@
+CHANGELOG
+
+Added
+- Image background fixed
+
+Fixed
+
