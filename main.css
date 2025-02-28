@@ -64,12 +64,11 @@
     margin: 0;
     padding: 15px;
 
-    color: white;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    background: linear-gradient(to bottom, #f7faff6d 0%,#4e73926d 12%,#4e73926d 28%,#134e816d 88%,#b8d1f06d 100%);
-
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(132, 132, 132);
+    background: linear-gradient(to bottom, rgba(239,244,255,1) 0%,rgba(226,236,255,1) 48%,rgba(201,223,255,1) 50%,rgba(201,223,255,1) 95%,rgb(140, 172, 247) 98%,rgba(140, 172, 247,1) 100%);
     border-radius: 4px;
-    border-bottom: 1px solid rgb(107, 107, 107);
+    border-bottom: 1px solid rgb(255, 255, 255);
 
     font-size: larger;
     font-weight: 500;
@@ -214,6 +213,8 @@
     
 
     border-radius: 6px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.32) 0px 0px 5px 5px;
 
     background-color: white;
     
@@ -253,7 +254,7 @@
 
     padding: 10px;
     box-shadow: 0px 0px 10px 5px rgb(0, 0, 0) ;
-    background-color: rgba(255, 255, 255, 0.342);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.685) 0%,rgba(229, 229, 229, 0.676) 16%,rgba(229, 229, 229, 0.616) 17%,rgba(244, 244, 244, 0.749) 20%,rgba(255, 255, 255, 0.868) 45%,rgba(255,255,255,0.5) 48%,rgba(255,255,255,0.5) 61%,rgba(247,247,247,1) 64%,rgba(234,234,234,1) 87%,rgba(255, 255, 255, 0.498) 92%,rgba(255, 255, 255, 0.502) 100%);
 
     backdrop-filter: blur(3px);
 }
