@@ -240,6 +240,7 @@
     border: 1px solid rgb(107, 107, 107);
     border-radius: 4px;
 
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.199);
     box-shadow: rgba(255, 255, 255, 0.253) inset 0px 0px 10px 5px, rgba(128, 128, 128, 0.068) 0px 0px 2px 5px;
     
@@ -284,4 +285,11 @@
 
     background-position: center;
     background-attachment: fixed;
+}
+
+.top-7{
+    position:relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
