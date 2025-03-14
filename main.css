@@ -193,7 +193,72 @@
 
 /*BUTTNOS*/
 
+.button{
+    margin-bottom: 15px;
+    border: 1px solid rgb(107, 107, 107);
+    border-radius: 4px;
 
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.199);
+    box-shadow: rgba(255, 255, 255, 0.253) inset 0px 0px 10px 5px, rgba(128, 128, 128, 0.068) 0px 0px 2px 5px;
+    
+
+    backdrop-filter: blur(3px);
+}
+.button:hover{
+    margin-bottom: 15px;
+    border: 1px solid rgb(107, 107, 107);
+    border-radius: 4px;
+
+    padding: 10px;
+    background-color: rgba(123, 255, 96, 0.199);
+    box-shadow: rgba(255, 255, 255, 0.253) inset 0px 0px 10px 5px, rgba(128, 128, 128, 0.068) 0px 0px 2px 5px;
+    
+
+    backdrop-filter: blur(3px);
+}
+
+/*Forms*/
+.forms-7{
+    transform: translate(0%, 75%);
+    flex: content;
+    width: 25%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 7px;
+
+    padding: 10px ;
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0) ;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.685) 0%,rgba(229, 229, 229, 0.676) 16%,rgba(229, 229, 229, 0.616) 17%,rgba(244, 244, 244, 0.749) 20%,rgba(255, 255, 255, 0.868) 45%,rgba(255,255,255,0.5) 48%,rgba(255,255,255,0.5) 61%,rgba(247,247,247,1) 64%,rgba(234,234,234,1) 87%,rgba(255, 255, 255, 0.498) 92%,rgba(255, 255, 255, 0.502) 100%);
+
+    backdrop-filter: blur(3px);
+}
+
+.forms-inside{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+    border: 1px solid rgb(107, 107, 107);
+    border-radius: 4px;
+
+    background-color: white;
+    
+}
+
+.input{
+    text-align: center;
+    width: 80%;
+    margin: 15px;
+    padding: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 /*UTIL*/
 
 .content-inside{
@@ -281,7 +346,7 @@
 .image-bk{
     background-image: url(miscellaneous_5.jpg);
     background-repeat: no-repeat;
-    background-size: 200vh;
+    background-size: 220vh;
 
     background-position: center;
     background-attachment: fixed;
