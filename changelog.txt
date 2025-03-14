@@ -1,7 +1,16 @@
 CHANGELOG
 
+Alpha 1.05
 Added
 - Image background fixed
+
+Alpha 1.06
+Added
+Forms Conent
+Forms inside conent
+Button
+input
+and adjusted things
 
 Fixed
 
