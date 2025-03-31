@@ -352,6 +352,15 @@
     background-attachment: fixed;
 }
 
+.xp-bk{
+    background-image: url(Windows-XP.jpg);
+    background-repeat: no-repeat;
+    background-size: 220vh;
+
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .top-7{
     position:relative;
     display: flex;
