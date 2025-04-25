@@ -30,7 +30,6 @@
 
 .title-vista{
     margin: 0;
-    padding: 15px;
 
     color: white;
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
@@ -42,11 +41,34 @@
     font-size: larger;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-vista h1 {
+    margin: 0%;
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+}
+.title-vista a {
+    margin: 5px;
+    font-size: small;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    float: right;
+    background: #f50000;
+    background: radial-gradient(circle,rgba(158, 0, 0, 1) 0%, rgba(240, 93, 93, 1) 16%, rgba(242, 133, 133, 1) 39%, rgba(237, 26, 26, 1) 52%);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .title-vista-blue{
     margin: 0;
-    padding: 15px;
 
     color: white;
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
@@ -58,11 +80,34 @@
     font-size: larger;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-vista-blue h1 {
+    margin: 0%;
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+}
+.title-vista-blue a {
+    margin: 5px;
+    font-size: small;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    float: right;
+    background: #f50000;
+    background: radial-gradient(circle,rgba(158, 0, 0, 1) 0%, rgba(240, 93, 93, 1) 16%, rgba(242, 133, 133, 1) 39%, rgba(237, 26, 26, 1) 52%);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .title-7{
     margin: 0;
-    padding: 15px;
 
     color: rgb(255, 255, 255);
     text-shadow: 0px 0px 10px rgb(132, 132, 132);
@@ -73,11 +118,13 @@
     font-size: larger;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .title-7-dark{
     margin: 0;
-    padding: 15px;
 
     color: white;
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
@@ -89,11 +136,36 @@
     font-size: larger;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-7 h1, .title-7-dark h1 {
+    margin: 0%;
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+}
+
+.title-7 a, .title-7-dark a {
+    margin: 5px;
+    font-size: small;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    float: right;
+    background: #f50000;
+    background: radial-gradient(circle,rgba(158, 0, 0, 1) 0%, rgba(240, 93, 93, 1) 16%, rgba(242, 133, 133, 1) 39%, rgba(237, 26, 26, 1) 52%);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .title-xp{
     margin: 0;
-    padding: 15px;
+    
 
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
@@ -102,13 +174,36 @@
     border-radius: 4px;
     border-bottom: 4px solid #004bed;
 
-    font-size: larger;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
 }
+
+.title-xp h1 {
+    margin: 0%;
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+}
+
+.title-xp a {
+    margin:2px 2px 2px 0;
+    font-size: small;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    float:right;
+    background: linear-gradient(to bottom, #ea4949 10%,#e80000 17%,#e80000 70%,#a30000 100%);
+    padding: 8px;
+    border-radius: 7px;
+    width:35px;
+    text-align:center;
+    font-size:25px;
+}
+
 .title-95{
     margin: 0;
-    padding: 10px;
 
     color: white;
     background-color: #000082;
@@ -116,6 +211,34 @@
     font-size: larger;
     font-weight: 550;
     font-family: Tahoma;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-95 h1 {
+    margin: 0%;
+    font-size: larger;
+    font-weight: 600;
+    font-family: Tahoma;
+    padding: 10px
+}
+
+.title-95 a {
+    margin:4px 4px 4px 0;
+    float:right;
+    background:#C0C0C0;
+    border-width:3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+    border-style:solid;
+    padding:5px;
+    font-size:20px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
+    text-decoration: none;
+    width:25px;
+    color: black;
 }
 
 
