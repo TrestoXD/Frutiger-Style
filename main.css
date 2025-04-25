@@ -106,6 +106,18 @@
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.title-95{
+    margin: 0;
+    padding: 10px;
+
+    color: white;
+    background-color: #0022ff;
+
+    font-size: larger;
+    font-weight: 500;
+    font-family: Helvetica;
+}
+
 
 /*SUBTITLES*/
 
@@ -182,6 +194,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.subtitle-95{
+    margin: 15px;
+    padding: 0;
+
+    color: #0022ff;
+
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Helvetica;
+}
+
 /*TEXT*/
 
 .text{
@@ -189,6 +212,12 @@
     padding: 0;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text-95{
+    margin: 15px;
+    padding: 0;
+
+    font-family: Helvetica;
 }
 
 /*BUTTNOS*/
@@ -297,8 +326,19 @@
     border-radius: 10px;
 
     background-color: white;
-    
 }
+
+.content-inside-95{
+    margin: 0px;
+    padding: 0px;
+
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+
+    background-color: white;
+}
+
 
 .content{
     margin-bottom: 15px;
@@ -337,6 +377,14 @@
     
 
     backdrop-filter: blur(3px);
+}
+
+.content-95{
+    margin-bottom: 15px;
+
+    box-shadow: 0 0 0 3px #d7d7d7, 0 0 0 3px #d7d7d7 inset;
+        border: 3px solid #ffffff;
+        padding: 3px;
 }
 
 .spacing{
