@@ -187,16 +187,19 @@
 }
 
 .title-xp a {
-    margin: 5px;
+    margin:2px 2px 2px 0;
     font-size: small;
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     text-decoration: none;
-    float: right;
-    background-color: red;
-    padding: 15px;
+    float:right;
+    background: linear-gradient(to bottom, #ea4949 10%,#e80000 17%,#e80000 70%,#a30000 100%);
+    padding: 8px;
     border-radius: 7px;
+    width:35px;
+    text-align:center;
+    font-size:25px;
 }
 
 .title-95{
@@ -222,14 +225,20 @@
 }
 
 .title-95 a {
-    font-size: small;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    margin:4px 4px 4px 0;
+    float:right;
+    background:#C0C0C0;
+    border-width:3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+    border-style:solid;
+    padding:5px;
+    font-size:20px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
     text-decoration: none;
-    float: right;
-    background-color: red;
-    padding: 10px;
+    width:25px;
+    color: black;
 }
 
 
