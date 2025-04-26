@@ -186,20 +186,20 @@
     padding: 15px;
 }
 
-.title-xp a {
-    margin:2px 2px 2px 0;
+.title-xp button {
+    margin:9px 5px 9px 0;
     font-size: small;
-    font-weight: 600;
+    font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     text-decoration: none;
     float:right;
     background: linear-gradient(to bottom, #ea4949 10%,#e80000 17%,#e80000 70%,#a30000 100%);
-    padding: 8px;
+    padding: 0px;
     border-radius: 7px;
     width:35px;
     text-align:center;
-    font-size:25px;
+    font-size:20px;
 }
 
 .title-95{
