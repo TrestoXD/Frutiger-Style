@@ -53,7 +53,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 15px;
 }
-.title-vista a {
+.title-vista button {
     margin: 5px;
     font-size: small;
     font-weight: 500;
@@ -92,7 +92,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 15px;
 }
-.title-vista-blue a {
+.title-vista-blue button {
     margin: 5px;
     font-size: small;
     font-weight: 500;
@@ -149,7 +149,7 @@
     padding: 15px;
 }
 
-.title-7 a, .title-7-dark a {
+.title-7 button, .title-7-dark button {
     margin: 5px;
     font-size: small;
     font-weight: 500;
@@ -196,10 +196,12 @@
     float:right;
     background: linear-gradient(to bottom, #ea4949 10%,#e80000 17%,#e80000 70%,#a30000 100%);
     padding: 0px;
-    border-radius: 7px;
+    border-radius: 4px;
     width:35px;
     text-align:center;
     font-size:20px;
+    border-color:#FFFFFF #ffffff #ffffff #FFFFFF;
+    box-shadow: none;
 }
 
 .title-95{
