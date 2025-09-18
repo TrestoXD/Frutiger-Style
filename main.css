@@ -394,6 +394,24 @@
     backdrop-filter: blur(3px);
 }
 
+.forms-95{
+    transform: translate(0%, 75%);
+    flex: content;
+    width: 40%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:#a0a0a0;
+    border-width:3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+    border-style:solid;
+    padding:0px;
+
+}
+
 .forms-inside{
     justify-content: center;
     align-items: center;
@@ -545,4 +563,42 @@
     display: flex;
     justify-content: end;
     align-items: end;
+}
+
+/*POP UPS*/
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.overlay.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup{
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:#a0a0a0;
+    border-width:3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+    border-style:solid;
+    padding:0px;
+
+
 }
