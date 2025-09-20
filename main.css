@@ -212,7 +212,7 @@
     background-color: #000082;
 
     font-size: larger;
-    font-weight: 550;
+    font-weight: 300;
     font-family: Tahoma;
 
     display: flex;
@@ -222,7 +222,7 @@
 .title-95 h1 {
     margin: 0%;
     font-size: larger;
-    font-weight: 600;
+    font-weight: 300;
     font-family: Tahoma;
     padding: 5px
 }
@@ -246,6 +246,44 @@
     border-color:#000000 #fffcfc #ffffff #000000;
 }
 
+.title-me{
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    background: linear-gradient(to left,rgb(167, 192, 255), rgb(0, 7, 100));
+
+    font-size: larger;
+    font-weight: 300;
+    font-family: Tahoma;
+
+    display: flex;
+    justify-content: space-between;
+}
+.title-me h1 {
+    margin: 0%;
+    font-size: larger;
+    font-weight: 300;
+    font-family: Tahoma;
+    padding: 5px
+}
+.title-me button {
+    margin:5px 5px 5px 0;
+    float:right;
+    background:#C0C0C0;
+    border-width:3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+    border-style:solid;
+    font-size:15px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
+    text-decoration: none;
+    color: black;
+}
+.title-me button:active{
+    border-color:#000000 #fffcfc #ffffff #000000;
+}
 
 /*SUBTITLES*/
 
@@ -373,6 +411,24 @@
     
 
     backdrop-filter: blur(3px);
+}
+
+.button-95 {
+    margin: 10px;
+    background:#C0C0C0;
+    border-width:3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+    border-style:solid;
+    font-size:15px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+}
+.button-95:active{
+    border-color:#000000 #fffcfc #ffffff #000000;
 }
 
 /*Forms*/
