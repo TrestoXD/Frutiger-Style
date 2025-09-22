@@ -611,6 +611,7 @@
 }
 
 .nine-bk{
+    margin: 0;
     background-color: #008080;
 }
 
@@ -657,4 +658,34 @@
     padding:0px;
 
 
+}
+
+/* Taskbar */
+
+.footer-95{
+    position: absolute;
+    width: 99%;
+    bottom: 0;
+    margin: 0px;
+    padding: 5px;
+    background-color: #a0a0a0;
+    border-color:#FFFFFF #a0a0a0 #a0a0a0 #FFFFFF;
+    border-style:solid;
+    font-family: Helvetica;
+}
+
+.footer-95 button{
+    align-items: center;
+    text-align: center;
+    
+    background:#a0a0a0;
+    border-width:3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+    border-style:solid;
+    gap: 5px;
+    
+    font-family: Helvetica;
+}
+.b-start-95:active{
+    border-color:#000000 #fffcfc #ffffff #000000;
 }
