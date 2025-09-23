@@ -667,9 +667,10 @@
     width: 99%;
     bottom: 0;
     margin: 0px;
-    padding: 5px;
-    background-color: #a0a0a0;
-    border-color:#FFFFFF #a0a0a0 #a0a0a0 #FFFFFF;
+    padding: 3px;
+    background-color: #c3c3c3;
+    border-color:#FFFFFF #c3c3c3 #c3c3c3 #FFFFFF;
+    border-bottom: 0px;
     border-style:solid;
     font-family: Helvetica;
 }
@@ -677,15 +678,31 @@
 .footer-95 button{
     align-items: center;
     text-align: center;
-    
-    background:#a0a0a0;
+    justify-content: center;
+
+    background:#c3c3c3;
     border-width:3px;
     border-color:#FFFFFF #000000 #000000 #FFFFFF;
     border-style:solid;
     gap: 5px;
-    
+    height: 32px;
     font-family: Helvetica;
 }
 .b-start-95:active{
     border-color:#000000 #fffcfc #ffffff #000000;
+}
+
+.footer-95 button:active{
+    border-color:#000000 #fffcfc #ffffff #000000;
+}
+
+.footer-95 button img {
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+}
+.footer-95 button span{
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
 }
