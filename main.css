@@ -732,7 +732,9 @@
     background-color: transparent;
     border-color: transparent;
     color: white;
+    border-width: 1px;
 }
+
 .Desktop button img {
     width: 40px;
     height: 40px;
@@ -743,5 +745,5 @@
     background-color: rgba(255, 255, 255, 0.199);
     border-style:solid;
     border-color:#00000067;
-    border-width: 1.5px;
+    border-width: 1px;
 }
