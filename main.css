@@ -707,4 +707,10 @@
     vertical-align: middle;
 }
 
-/* */
+/* Desktop */
+.Desktop{
+    margin: 5px;
+}
+.Desktop button{
+    font-family: Helvetica, sans-serif;
+}

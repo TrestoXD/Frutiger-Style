@@ -1,2 +1,2 @@
 # Frutiger-Style
-A bootstrap like frutiger aero 
+A bootstrap like frutiger aero and other themes
