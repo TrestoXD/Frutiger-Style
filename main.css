@@ -681,7 +681,7 @@
     justify-content: center;
 
     background:#c3c3c3;
-    border-width:3px;
+    border-width:2px;
     border-color:#FFFFFF #000000 #000000 #FFFFFF;
     border-style:solid;
     gap: 5px;
@@ -710,7 +710,38 @@
 /* Desktop */
 .Desktop{
     margin: 5px;
+    display:grid;
+    position: relative;
+    place-items: left;
+    gap: 4px;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    padding: 0px;
 }
 .Desktop button{
-    font-family: Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    width: 80px;
+    min-height: 70px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: .9rem;
+    cursor: default;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+.Desktop button img {
+    width: 40px;
+    height: 40px;
+    image-rendering:pixelated;
+}
+
+.Desktop button:hover{
+    background-color: rgba(255, 255, 255, 0.199);
+    border-style:solid;
+    border-color:#00000067;
+    border-width: 1.5px;
 }
