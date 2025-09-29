@@ -1,18 +1,12 @@
-const Bar = document.querySelectorAll(".pane");
-let offsetX, offsetY;
+import Konva from 'konva';
 
-const move = (e) => {
-    Bar.style.left = `${e.clientX - offsetX}px`;
-    Bar.style.top = `${e.clientY - offsetY}px`;
-}
-
-Bar.addEventListener("mousedown", (e) => {
-
-    offsetX = e.clientX - Bar.offsetLeft;
-    offsetY = e.clientY - Bar.offsetTop;
-    document.addEventListener("mousemove", move);
+const stage = new Konva.Sage({
+    container: 'container',
+    width: window.innerWidth,
+    height: window.innerHeight,
 });
 
-document.addEventListener("mouseup", () => {
-    document.removeEventListener("mousemove", move);
-});
+const layer = new Konva.Layer();
+stage.add(layer);
+
+const
