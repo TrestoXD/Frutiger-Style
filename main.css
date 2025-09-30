@@ -111,7 +111,7 @@
 
     color: rgb(255, 255, 255);
     text-shadow: 0px 0px 10px rgb(132, 132, 132);
-    background: linear-gradient(to bottom, rgba(239,244,255,1) 0%,rgba(226,236,255,1) 48%,rgba(201,223,255,1) 50%,rgba(201,223,255,1) 95%,rgb(140, 172, 247) 98%,rgba(140, 172, 247,1) 100%);
+    background: linear-gradient(to bottom, rgba(239, 244, 255, 0.5) 0%,rgba(226,236,255,1) 48%,rgba(201,223,255,1) 50%,rgba(201,223,255,1) 95%,rgb(140, 172, 247) 98%,rgba(140, 172, 247,1) 100%);
     border-radius: 4px;
     border-bottom: 1px solid rgb(255, 255, 255);
 
@@ -187,10 +187,10 @@
 }
 
 .title-xp button {
-    margin:9px 5px 9px 0;
+    margin:8px 5px 12px 10px;
     font-size: small;
     font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     color: white;
     text-decoration: none;
     float:right;
@@ -202,6 +202,7 @@
     font-size:20px;
     border-color:#FFFFFF #ffffff #ffffff #FFFFFF;
     box-shadow: none;
+    justify-content: center;
 }
 
 .title-95{
@@ -593,7 +594,7 @@
 }
 
 .image-bk{
-    background-image: url(miscellaneous_5.jpg);
+    background-image: url(./Images/Wallpapers/miscellaneous_5.jpg);
     background-repeat: no-repeat;
     background-size: 220vh;
 
@@ -602,7 +603,7 @@
 }
 
 .xp-bk{
-    background-image: url(Windows-XP.jpg);
+    background-image: url(./Images/Wallpapers/Windows-XP.jpg);
     background-repeat: no-repeat;
     background-size: 220vh;
 
@@ -747,3 +748,19 @@
     border-color:#00000067;
     border-width: 1px;
 }
+
+  #container{
+    background-color:#008080 ;
+    background-size: 4em 4em;
+    height: 100vh;
+  }
+  
+  
+  #card{
+    width: 400px;
+    height: 200px;
+    background-color: #a0a0a0;
+    cursor: pointer;
+    position: fixed;
+  }
+
