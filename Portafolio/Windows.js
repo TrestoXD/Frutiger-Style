@@ -30,3 +30,9 @@ function mouseMove(e){
 function mouseUp(e){
     document.removeEventListener('mousemove', mouseMove)
 }
+
+function closeWellcome(){
+    const win = document.getElementById('welcome')
+
+    win.parentElement.
+}

@@ -203,6 +203,12 @@
     border-color:#FFFFFF #ffffff #ffffff #FFFFFF;
     box-shadow: none;
     justify-content: center;
+    gap: 0px;
+}
+
+.title-95 button img {
+    width: 12px;
+    min-height: 20px;
 }
 
 .title-95{
@@ -230,6 +236,7 @@
 }
 
 .title-95 button {
+    justify-content: right;
     margin:5px 5px 5px 0;
     float:right;
     background:#C0C0C0;
@@ -239,9 +246,10 @@
     font-size:15px;
     font-weight:bold;
     font-family:Tahoma;
-    text-align:center;
+    text-align:right;
     text-decoration: none;
     color: black;
+    display: flex;
 }
 
 .title-95 button:active{
