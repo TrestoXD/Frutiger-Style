@@ -218,6 +218,7 @@
 
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .title-95 h1 {
@@ -766,7 +767,6 @@
   
   
   #card{
-    cursor: pointer;
     position: fixed;
   }
 
