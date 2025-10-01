@@ -643,6 +643,15 @@
     opacity: 1;
 }
 
+.overlay_desktop{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 50%;   
+}
+
 .popup{
     justify-content: center;
     align-content: center;
@@ -752,14 +761,11 @@
   #container{
     background-color:#008080 ;
     background-size: 4em 4em;
-    height: 100vh;
+    height: 99vh;
   }
   
   
   #card{
-    width: 600px;
-    height: 200px;
-    background-color: #a0a0a0;
     cursor: pointer;
     position: fixed;
   }

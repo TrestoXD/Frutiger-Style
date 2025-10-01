@@ -1,8 +1,10 @@
 let newX = 0, newY = 0, startX = 0, startY = 0;
 
 const card = document.getElementById('card')
+const windowinside = document.getElementById('cardinside')
 
 card.addEventListener('mousedown', mouseDown)
+windowinside.addEventListener('mousedown', mouseDown)
 
 function mouseDown(e){
     startX = e.clientX
@@ -21,6 +23,9 @@ function mouseMove(e){
 
     card.style.top = (card.offsetTop - newY) + 'px'
     card.style.left = (card.offsetLeft - newX) + 'px'
+
+    windowinside.style.top = (windowinside.offsetTop - newY) + 'px'
+    windowinside.style.left = (windowinside.offsetLeft - newX) + 'px'
 }
 
 function mouseUp(e){
