@@ -32,7 +32,10 @@ function mouseUp(e){
 }
 
 function closeWellcome(){
-    const win = document.getElementById('welcome')
+    document.querySelector('.overlay_desktop').classList.add('active')
+    document.querySelector('.buttontask').classList.add('active')
+}
 
-    win.parentElement.
+function openwellcome(){
+    window.location.reload();
 }

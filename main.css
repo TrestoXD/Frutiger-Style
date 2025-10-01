@@ -658,7 +658,24 @@
     justify-content: center;
     align-items: center;
     top: 0;
-    left: 50%;   
+    left: 50%;
+    visibility: visible;
+    opacity: 1;   
+}
+
+.overlay_desktop.active{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.buttontask{
+    opacity: 1;
+    visibility: visible;
+}
+
+.buttontask.active{
+    opacity: 0;
+    visibility: hidden;
 }
 
 .popup{
