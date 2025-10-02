@@ -37,5 +37,18 @@ function closeWellcome(){
 }
 
 function openwellcome(){
-    window.location.reload();
+    if(document.querySelector('.overlay_desktop.active')){
+        document.querySelector('.overlay_desktop').classList.remove('active')
+        document.querySelector('.buttontask').classList.remove('active')
+    }
+}
+
+function minimizewellcome(){
+    document.querySelector('.overlay_desktop').classList.add('active')
+}
+
+function maximizewellcome(){
+    if(document.querySelector('.overlay_desktop.active')){
+        document.querySelector('.overlay_desktop').classList.remove('active')
+    }
 }
