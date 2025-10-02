@@ -52,3 +52,10 @@ function maximizewellcome(){
         document.querySelector('.overlay_desktop').classList.remove('active')
     }
 }
+
+// Boton presionado
+//const button = document.querySelector('.button');
+//
+//button.addEventListener('click', () => {
+//  console.log('Button clicked');
+//});

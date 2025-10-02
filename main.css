@@ -668,6 +668,42 @@
     opacity: 0;
 }
 
+.overlay_taskbar{
+    position: fixed;
+    display: flex;
+    justify-content: left;
+    align-items:end;
+    bottom: 42px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay_taskbar.active{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.windows95-taskbar-menu-title{
+    background-color: gray;
+    width: 50px;
+    height: 100%;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    justify-content: flex-end;
+    align-items:end;
+    bottom: 0px;
+}
+.windows95-taskbar-menu{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: flex-end;
+    align-items:end;
+    justify-self: end;
+    bottom: 0px;
+}
+
 .buttontask{
     opacity: 1;
     visibility: visible;
