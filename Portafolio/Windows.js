@@ -53,9 +53,8 @@ function maximizewellcome(){
     }
 }
 
-// Boton presionado
-//const button = document.querySelector('.button');
-//
-//button.addEventListener('click', () => {
-//  console.log('Button clicked');
-//});
+
+function sidebarmenu(){
+    menuisclicked = true;
+    console.log(menuisclicked);
+}
