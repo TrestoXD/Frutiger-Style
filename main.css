@@ -674,13 +674,18 @@
     justify-content: left;
     align-items:end;
     bottom: 42px;
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .overlay_taskbar.active{
-    opacity: 0;
-    visibility: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: left;
+    align-items:end;
+    bottom: 42px;
+    opacity: 1;
+    visibility: visible;
 }
 
 .windows95-taskbar-menu-title{

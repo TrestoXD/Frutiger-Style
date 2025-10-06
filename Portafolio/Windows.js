@@ -52,9 +52,3 @@ function maximizewellcome(){
         document.querySelector('.overlay_desktop').classList.remove('active')
     }
 }
-
-
-function sidebarmenu(){
-    menuisclicked = true;
-    console.log(menuisclicked);
-}
