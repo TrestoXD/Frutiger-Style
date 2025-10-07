@@ -8,23 +8,23 @@
 </head>
 <body class="nine-bk">
     <div class="Desktop">
-        <button class="item-deb"><img src="../Images/Icons/w95_32.ico" alt="papelera"><samp>Papelera de reciclaje</samp></button>
-        <button class="item-deb"><img src="../Images/Icons/w95_5.ico" alt="carpeta llena"><samp> Sobre mí</samp></button>
-        <button class="item-deb"><img src="../Images/Icons/w95_16.ico" alt="ordenador"><samp>MiOrdenador</samp></button>
-        <button class="item-deb"><img src="../Images/Icons/w95_4.ico" alt="carpeta"><samp>Resumen</samp></button>
-        <button class="item-deb"><img src="../Images/Icons/w95_4.ico" alt="carpeta"><samp>Proyectos</samp></button>
-        <button class="item-deb"><img src="../Images/Icons/w95_70.ico" alt="correo"><samp>Correo</samp></button>
-        <button class="item-deb" ondblclick="openwellcome()"><img src="../Images/Icons/w95_1.ico" alt="bienvenido"><samp>Bienvenido .bat</samp></button>
+        <button class="item-deb" id="icos"><img src="../Images/Icons/w95_32.ico" alt="papelera"><samp>Papelera de reciclaje</samp></button>
+        <button class="item-deb" id="icos"><img src="../Images/Icons/w95_5.ico" alt="carpeta llena"><samp> Sobre mí</samp></button>
+        <button class="item-deb" id="icos"><img src="../Images/Icons/w95_16.ico" alt="ordenador"><samp>MiOrdenador</samp></button>
+        <button class="item-deb" id="icos"><img src="../Images/Icons/w95_4.ico" alt="carpeta"><samp>Resumen</samp></button>
+        <button class="item-deb" id="icos"><img src="../Images/Icons/w95_4.ico" alt="carpeta"><samp>Proyectos</samp></button>
+        <button class="item-deb" id="icos"><img src="../Images/Icons/w95_70.ico" alt="correo"><samp>Correo</samp></button>
+        <button class="item-deb" ondblclick="openwellcome()" id="icos"><img src="../Images/Icons/w95_1.ico" alt="bienvenido"><samp>Bienvenido .bat</samp></button>
     </div>
     <div id="container" class="overlay_desktop">
-        <div class="content-95" style="width: 500px;" id="card">
+        <div class="content-95" style="width: 500px; height: 230px;" id="card">
             <div id="welcome">
             <div class="content-inside-95">
                 <div class="title-95"> 
                     <h1>Bienvenido!</h1>
                     <div>
                         <button onclick="closeWellcome()"><img src="../Images/Icons/close.svg" alt="X"></button>
-                        <button><img src="../Images/Icons/maximize.svg" alt="O"></button>
+                        <button onclick="maximizewellcome()"><img src="../Images/Icons/maximize.svg" alt="O"></button>
                         <button onclick="minimizewellcome()"><img src="../Images/Icons/minimize.svg" alt="-"></button>
                     </div>
                 </div>
@@ -50,10 +50,11 @@
 <footer class="footer-95">
     <div>
         <button onclick="sidebarmenu()"><img src="../Images/Icons/w95_40.ico" alt=""> <span>Start</span></button>
-        <button onclick="maximizewellcome()" class="buttontask" ><span>Welcome</span></button>
+        <button onclick="maximinimizewellcome()" class="buttontask" ><span>Welcome</span></button>
     </div>
 </footer>
     <script src="Windows.js"></script>
     <script src="Apps.js"></script>
     <script src="Taskbar.js"></script>
+    <script src="icons.js"></script>
 </html>
