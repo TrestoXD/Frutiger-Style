@@ -788,6 +788,7 @@
 
 /* Desktop */
 .Desktop{
+    user-select: none;
     position: fixed;
     display: flex;
     margin: 5px;
