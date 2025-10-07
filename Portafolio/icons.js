@@ -1,33 +1,45 @@
-let newX = 0, newY = 0, startX = 0, startY = 0;
+let icoX = 0, icoY = 0, icostartX = 0, icostartY = 0;
 
-const card = document.getElementById('icos');
+let icona = document.querySelectorAll('#icos');
 
-card.addEventListener('mousedown', mouseDown)
+icona.forEach(function(elem){
+   elem.addEventListener('mousedown', mouseDownicons)
+});
 
-function mouseDown(e){
-    if(e.target.classList.contains("item-deb")){
-        console.log("hola")
-        startX = e.clientX
-        startY = e.clientY
+function mouseDownicons(e){
+    console.log("hola")
+    icostartX = e.clientX
+    icostartY = e.clientY
 
-        document.addEventListener('mousemove', mouseMove)
-        document.addEventListener('mouseup', mouseUp)
+    document.addEventListener('mousemove', mouseMoveicons)
+    document.addEventListener('mouseup', mouseUpicons)
+}
+
+function mouseMoveicons(e){
+    if(e.target.closest(".item-papelera")){
+        console.log("yes")
+        icoX = icostartX - e.clientX 
+        icoY = icostartY - e.clientY 
+        
+        icostartX = e.clientX
+        icostartY = e.clientY
+
+        e.target.style.top = (e.target.offsetTop - icoY) + 'px'
+        e.target.style.left = (e.target.offsetLeft - icoX) + 'px'
+        e.target.style.opacity = 0.5;
     }
 }
 
-function mouseMove(e){
-    //if(e.target.tagName === 'DIV'){
-        newX = startX - e.clientX 
-        newY = startY - e.clientY 
+function mouseUpicons(e){
+    document.removeEventListener('mousemove', mouseMoveicons)
+    icoX = icostartX - e.clientX 
+    icoY = icostartY - e.clientY 
         
-        startX = e.clientX
-        startY = e.clientY
+    icostartX = e.clientX
+    icostartY = e.clientY
 
-        card.style.top = (card.offsetTop - newY) + 'px'
-        card.style.left = (card.offsetLeft - newX) + 'px'
-    //}
-}
-
-function mouseUp(e){
-    document.removeEventListener('mousemove', mouseMove)
+    e.target.style.top = (Math.floor((e.target.offsetTop - icoY) /100))*100 + 10 +'px'
+    e.target.style.left = (Math.floor((e.target.offsetLeft - icoX) /100 ))*100 + 5 + 'px'
+    e.target.style.opacity = 1;
+    console.log("END")
 }

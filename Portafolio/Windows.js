@@ -90,5 +90,5 @@ function maximizewellcome(){
         card.style.left = offsetX
 
     }
-    console.log("offset is: " + offsetX);
+    //console.log("offset is: " + offsetX);
 }

@@ -788,16 +788,12 @@
 
 /* Desktop */
 .Desktop{
+    position: fixed;
+    display: flex;
     margin: 5px;
-    display:grid;
-    position: relative;
-    place-items: left;
-    gap: 4px;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
     font-family: Helvetica, sans-serif;
     padding: 0px;
+    background-size: 4em 4em;
 }
 .Desktop button{
     text-align: center;
@@ -838,12 +834,36 @@
     position: fixed;
   }
 
+/* Items */
 .item-papelera{
     position: fixed;
     top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
 }
 .item-sobremi{
     position: fixed;
-    top: 100px;
+    top: 110px;
+}
+.item-miordenador{
+    position: fixed;
+    top: 210px;
+}
+.item-resumen{
+    position: fixed;
+    top: 310px;
+}
+.item-proyectos{
+    position: fixed;
+    top: 410px;
+}
+.item-correo{
+    position: fixed;
+    top: 510px;
+}
+.item-bienvenido{
+    position: fixed;
+    top: 610px;
 }
 

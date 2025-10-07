@@ -27,14 +27,14 @@ addEventListener("mousedown", (e) => {
     //    console.log("Detectado");
     //}
     let current = e.target.getAttribute('class');
-    console.log(current)
+    //console.log(current)
 
     if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title"){
-        console.log("si");
+        //console.log("si");
     }
     else{
         document.getElementById('sidemen').classList.remove('active');
         meg = false;
-        console.log("no");
+        //console.log("no");
     }
 })
