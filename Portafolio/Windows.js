@@ -1,6 +1,7 @@
 let newX = 0, newY = 0, startX = 0, startY = 0;
 let offsetX;
 let offsetY;
+let maximze_state;
 
 const card = document.getElementById('card');
 
@@ -27,6 +28,14 @@ function mouseMove(e){
         card.style.top = (card.offsetTop - newY) + 'px'
         card.style.left = (card.offsetLeft - newX) + 'px'
     //}
+    if(maximze_state == false){
+        maximze_state = true;
+        document.getElementById('maxi').src="../Images/Icons/maximize.svg"
+        card.style.width = 500 + 'px';
+        card.style.height = 230 + 'px';
+        card.style.top = offsetY + 200
+        card.style.left = offsetX
+    }
 }
 
 function mouseUp(e){
@@ -57,7 +66,6 @@ function maximinimizewellcome(){
 
 function maximizewellcome(){
 
-    let maximze_state;
     if(card.style.width == '100%'){
         maximze_state = true;
     }
@@ -72,8 +80,10 @@ function maximizewellcome(){
         offsetY = card.style.top;
         card.style.top = 0 + 'px'
         card.style.left = 0 + 'px';
+        document.getElementById('maxi').src="../Images/Icons/restore.svg"
     }
     else{
+        document.getElementById('maxi').src="../Images/Icons/maximize.svg"
         card.style.width = 500 + 'px';
         card.style.height = 230 + 'px';
         card.style.top = offsetY

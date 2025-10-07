@@ -838,7 +838,12 @@
     position: fixed;
   }
 
-.item-deb{
-
+.item-papelera{
+    position: fixed;
+    top: 10px;
+}
+.item-sobremi{
+    position: fixed;
+    top: 100px;
 }
 
