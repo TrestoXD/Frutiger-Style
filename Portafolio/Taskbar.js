@@ -1,10 +1,23 @@
+let meg;
 
-function sidebarmenu(){
-    document.querySelector('overlay_taskbar').classList.add('active');
+if(document.getElementById('sidemen').classList.contains('overlay_taskbar.active')){
+    meg = true;
+}
+else if(document.getElementById('sidemen').classList.contains('overlay_taskbar')){
+    meg = false;
 }
 
-function sidebarmenuoff(){
-        if(document.querySelector('.overlay_taskbar.active')){
-        document.querySelector('.overlay_taskbar').classList.remove('active')
+
+function sidebarmenu(){
+    if(document.getElementById('sidemen').classList.contains('overlay_taskbar') && meg == false){
+        console.log("On");  
+        document.getElementById('sidemen').classList.add('active');
+        meg = true;
     }
+    else if(document.getElementById('sidemen').classList.contains('overlay_taskbar.active') && meg == true){
+        console.log("Off");
+        document.getElementById('sidemen').classList.remove('active');
+        meg = false;
+    }
+    console.log(meg);
 }
