@@ -812,6 +812,7 @@
 }
 
 .Desktop button img {
+    user-select: none;
     width: 40px;
     height: 40px;
     image-rendering:pixelated;
@@ -839,9 +840,9 @@
 .item-papelera{
     position: fixed;
     top: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: white;
+    width: 80px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.594);
 }
 .item-sobremi{
     position: fixed;
