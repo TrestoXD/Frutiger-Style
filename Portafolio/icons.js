@@ -17,7 +17,6 @@ function mouseDownicons(e){
 
 function mouseMoveicons(e){
     if(e.target.closest(".item-papelera")){
-        let parent = e.target.parentNode;
         console.log("yes")
         icoX = icostartX - e.clientX 
         icoY = icostartY - e.clientY 
@@ -25,9 +24,9 @@ function mouseMoveicons(e){
         icostartX = e.clientX
         icostartY = e.clientY
 
-        parent.style.top = (e.target.offsetTop - icoY) + 'px'
-        parent.style.left = (e.target.offsetLeft - icoX) + 'px'
-        parent.style.opacity = 0.5;
+        e.target.style.top = (e.target.offsetTop - icoY) + 'px'
+        e.target.style.left = (e.target.offsetLeft - icoX) + 'px'
+        e.target.style.opacity = 0.5;
     }
 }
 
@@ -39,8 +38,8 @@ function mouseUpicons(e){
     icostartX = e.clientX
     icostartY = e.clientY
 
-    parent.style.top = (Math.floor((e.target.offsetTop - icoY) /100))*100 + 10 +'px'
-    parent.style.left = (Math.floor((e.target.offsetLeft - icoX) /100 ))*100 + 10 + 'px'
-    parent.style.opacity = 1;
+    e.target.style.top = (Math.floor((e.target.offsetTop - icoY) /100))*100 + 10 +'px'
+    e.target.style.left = (Math.floor((e.target.offsetLeft - icoX) /100 ))*100 + 10 + 'px'
+    e.target.style.opacity = 1;
     console.log("END")
 }
