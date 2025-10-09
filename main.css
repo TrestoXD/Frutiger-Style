@@ -842,7 +842,24 @@
     top: 10px;
     width: 80px;
     height: 90px;
-    background-color: rgba(255, 255, 255, 0.594);
+    background-color: rgba(255, 255, 255, 0);
+    user-select: none;
+    border: rgba(255, 255, 255, 0);
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    text-align: center;
+}
+
+#icos img{
+    width: 45px;
+    image-rendering: pixelated;
+}
+.item-papelera img{
+}
+
+.itema{
+    user-select: none;
 }
 .item-sobremi{
     position: fixed;

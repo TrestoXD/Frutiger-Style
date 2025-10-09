@@ -3,7 +3,9 @@ let icoX = 0, icoY = 0, icostartX = 0, icostartY = 0;
 let icona = document.querySelectorAll('#icos');
 
 icona.forEach(function(elem){
-   elem.addEventListener('mousedown', mouseDownicons)
+   elem.addEventListener('mousedown', mouseDownicons);
+   elem.addEventListener('mouseenter',mouseHover);
+   elem.addEventListener('mouseleave', mouseOut);
 });
 
 function mouseDownicons(e){
@@ -13,6 +15,17 @@ function mouseDownicons(e){
 
     document.addEventListener('mousemove', mouseMoveicons)
     document.addEventListener('mouseup', mouseUpicons)
+}
+
+function mouseHover(e){
+    e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.199)';
+    e.target.style.borderStyle = 'solid';
+    e.target.style.borderColor = '#00000067';
+}
+
+function mouseOut(e){
+    e.target.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+    e.target.style.borderColor = '#000000';
 }
 
 function mouseMoveicons(e){
