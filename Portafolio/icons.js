@@ -25,7 +25,8 @@ function mouseHover(e){
 
 function mouseOut(e){
     e.target.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-    e.target.style.borderColor = '#000000';
+    e.target.style.borderStyle = 'solid';
+    e.target.style.borderColor = '#00000000';
 }
 
 function mouseMoveicons(e){
