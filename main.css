@@ -849,6 +849,22 @@
     border-width: 1px;
     color: white;
     text-align: center;
+    opacity: 100%;
+}
+
+.item-papelera.moving{
+    position: fixed;
+    top: 10px;
+    width: 80px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0);
+    user-select: none;
+    border: rgba(255, 255, 255, 0);
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    text-align: center;
+    opacity: 50%;
 }
 
 #icos img{

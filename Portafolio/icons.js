@@ -44,7 +44,7 @@ function mouseMoveicons(e){
         e.target.style.top = (e.target.offsetTop - icoY) + 'px'
         e.target.style.left = (e.target.offsetLeft - icoX) + 'px'
         if(document.getElementsByClassName("item-papelera")){
-            e.target.style.opacity = 0.5;
+           
         }
     }
     else{
@@ -64,6 +64,6 @@ function mouseUpicons(e){
 
     e.target.style.top = (Math.floor((e.target.offsetTop - icoY) /100))*100 + 10 +'px'
     e.target.style.left = (Math.floor((e.target.offsetLeft - icoX) /100 ))*100 + 5 + 'px'
-    e.target.style.opacity = 1;
+    document.getElementsByClassName('itempapelera').addClass 
     console.log("END");
 }
