@@ -867,36 +867,7 @@
     opacity: 50%;
 }
 
-#icos img{
-    width: 45px;
+.item-papelera img{
     image-rendering: pixelated;
-}
-
-.itema{
-    user-select: none;
-}
-.item-sobremi{
-    position: fixed;
-    top: 110px;
-}
-.item-miordenador{
-    position: fixed;
-    top: 210px;
-}
-.item-resumen{
-    position: fixed;
-    top: 310px;
-}
-.item-proyectos{
-    position: fixed;
-    top: 410px;
-}
-.item-correo{
-    position: fixed;
-    top: 510px;
-}
-.item-bienvenido{
-    position: fixed;
-    top: 610px;
 }
 
