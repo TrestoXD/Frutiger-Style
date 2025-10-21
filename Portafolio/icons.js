@@ -68,6 +68,14 @@ function mouseMoveicons(e){
         }
     }
     else{
+        icoX = icostartX - e.clientX 
+        icoY = icostartY - e.clientY 
+        
+        icostartX = e.clientX
+        icostartY = e.clientY
+
+        e.target.style.top = (Math.floor((e.target.offsetTop - icoY) /100))*100 + 10 +'px'
+        e.target.style.left = (Math.floor((e.target.offsetLeft - icoX) /100 ))*100 + 5 + 'px'
         console.log("ey");
         mouseUpicons(e);
     }
