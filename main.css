@@ -228,11 +228,11 @@
 }
 
 .title-95 h1 {
-    margin: 0%;
-    font-size: larger;
+    margin: 0px;
+    font-size: large;
     font-weight: 300;
     font-family: Tahoma;
-    padding: 5px
+    padding: 7px
 }
 
 .title-95 button {
