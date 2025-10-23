@@ -2,6 +2,9 @@ let newX = 0, newY = 0, startX = 0, startY = 0;
 let offsetX;
 let offsetY;
 let maximze_state;
+let clicked;
+
+const win1 = document.getElementById('win1'), win2 = document.getElementById('win2')
 
 const card = document.getElementById('card');
 
@@ -18,7 +21,7 @@ function mouseDown(e){
 }
 
 function mouseMove(e){
-    //if(e.target.tagName === 'DIV'){
+    if(e.target == win1){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
         
@@ -27,14 +30,32 @@ function mouseMove(e){
 
         card.style.top = (card.offsetTop - newY) + 'px'
         card.style.left = (card.offsetLeft - newX) + 'px'
-    //}
-    if(maximze_state == false){
+        if(maximze_state == false){
         maximze_state = true;
         document.getElementById('maxi').src="../Images/Icons/maximize.svg"
         card.style.width = 500 + 'px';
         card.style.height = 230 + 'px';
         card.style.top = offsetY + 200
-        card.style.left = offsetX
+        card.style.left = offsetX;
+        }
+    }
+    else if(e.target == win2){
+        newX = startX - e.clientX 
+        newY = startY - e.clientY 
+        
+        startX = e.clientX
+        startY = e.clientY
+
+        card.style.top = (card.offsetTop - newY) + 'px'
+        card.style.left = (card.offsetLeft - newX) + 'px'
+        if(maximze_state == false){
+        maximze_state = true;
+        document.getElementById('maxi').src="../Images/Icons/maximize.svg"
+        card.style.width = 500 + 'px';
+        card.style.height = 230 + 'px';
+        card.style.top = offsetY + 200
+        card.style.left = offsetX;
+    }
     }
 }
 
@@ -42,7 +63,7 @@ function mouseUp(e){
     document.removeEventListener('mousemove', mouseMove)
 }
 
-function closeWellcome(){
+function closeWellcome(e){
     document.querySelector('.overlay_desktop').classList.add('active')
     document.querySelector('.buttontask').classList.add('active')
 }

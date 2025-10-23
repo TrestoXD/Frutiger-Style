@@ -599,6 +599,10 @@
     padding:0px;
     background-color: #c3c3c3;
 }
+.content-95.active{
+    visibility: hidden;
+    opacity: 0px;
+}
 
 .spacing{
     margin: 15px;
