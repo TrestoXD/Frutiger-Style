@@ -6,8 +6,9 @@ let clicked;
 
 const win1 = document.getElementById('win1'), win2 = document.getElementById('win2')
 
-const card = document.getElementById('card');
+const card = document.getElementById('card'), card1 = document.getElementById('card1');
 
+card1.addEventListener('mousedown', mouseDown)
 card.addEventListener('mousedown', mouseDown)
 
 function mouseDown(e){
@@ -46,15 +47,15 @@ function mouseMove(e){
         startX = e.clientX
         startY = e.clientY
 
-        card.style.top = (card.offsetTop - newY) + 'px'
-        card.style.left = (card.offsetLeft - newX) + 'px'
+        card1.style.top = (card1.offsetTop - newY) + 'px'
+        card1.style.left = (card1.offsetLeft - newX) + 'px'
         if(maximze_state == false){
         maximze_state = true;
         document.getElementById('maxi').src="../Images/Icons/maximize.svg"
-        card.style.width = 500 + 'px';
-        card.style.height = 230 + 'px';
-        card.style.top = offsetY + 200
-        card.style.left = offsetX;
+        card1.style.width = 500 + 'px';
+        card1.style.height = 230 + 'px';
+        card1.style.top = offsetY + 200
+        card1.style.left = offsetX;
     }
     }
 }

@@ -830,13 +830,19 @@
 }
 
   #container{
-    background-color:#008080 ;
+    background-color:#00808000 ;
     background-size: 4em 4em;
-    height: 99vh;
+    top: 200px;
   }
   
   
   #card{
+    position: fixed;
+  }
+  #card1{
+    position: fixed;
+  }
+  #card2{
     position: fixed;
   }
 
