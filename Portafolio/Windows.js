@@ -1,13 +1,19 @@
 let newX = 0, newY = 0, startX = 0, startY = 0;
 let offsetX;
 let offsetY;
-let maximze_state;
 let clicked;
+let currenttarget;
 
-const win1 = document.getElementById('win1'), win2 = document.getElementById('win2')
+//Window 1
+let maximze_state;
+const win = document.getElementById('win')
+const card = document.getElementById('card')
 
-const card = document.getElementById('card'), card1 = document.getElementById('card1');
+let maximze_state_1
+const card1 = document.getElementById('card1');
+const win1 = document.getElementById('win1');
 
+//Listeners
 card1.addEventListener('mousedown', mouseDown)
 card.addEventListener('mousedown', mouseDown)
 
@@ -19,10 +25,13 @@ function mouseDown(e){
         document.addEventListener('mousemove', mouseMove)
         document.addEventListener('mouseup', mouseUp)
     }
+    currenttarget = e.target;
+    console.log(currenttarget)
 }
 
 function mouseMove(e){
-    if(e.target == win1){
+    currenttarget = e.target;
+    if(e.target == win){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
         
@@ -40,7 +49,7 @@ function mouseMove(e){
         card.style.left = offsetX;
         }
     }
-    else if(e.target == win2){
+    else if(e.target == win1){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
         
@@ -62,11 +71,12 @@ function mouseMove(e){
 
 function mouseUp(e){
     document.removeEventListener('mousemove', mouseMove)
+    currenttarget = e.target;
 }
 
-function closeWellcome(e){
-    document.querySelector('.overlay_desktop').classList.add('active')
-    document.querySelector('.buttontask').classList.add('active')
+function closeWellcome(){
+        document.querySelector('.overlay_desktop').classList.add('active')
+        document.querySelector('.buttontask').classList.add('active')
 }
 
 function openwellcome(){
@@ -111,6 +121,6 @@ function maximizewellcome(){
         card.style.top = offsetY
         card.style.left = offsetX
 
-    }
-    //console.log("offset is: " + offsetX);
+    }  
+    console.log("offset is: " + offsetX);
 }
