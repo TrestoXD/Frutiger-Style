@@ -3,6 +3,7 @@ let offsetX;
 let offsetY;
 let clicked;
 let currenttarget;
+let active;
 
 //Window 1
 let maximze_state;
@@ -25,12 +26,11 @@ function mouseDown(e){
         document.addEventListener('mousemove', mouseMove)
         document.addEventListener('mouseup', mouseUp)
     }
-    currenttarget = e.target;
-    console.log(currenttarget)
+    currenttarget = e.target.id;
+    //showDiv(e);
 }
 
 function mouseMove(e){
-    currenttarget = e.target;
     if(e.target == win){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
@@ -71,18 +71,28 @@ function mouseMove(e){
 
 function mouseUp(e){
     document.removeEventListener('mousemove', mouseMove)
-    currenttarget = e.target;
+    currenttarget = e.target.id;
 }
 
 function closeWellcome(){
-        document.querySelector('.overlay_desktop').classList.add('active')
-        document.querySelector('.buttontask').classList.add('active')
+    console.log(currenttarget)
+    if(currenttarget == 'win'){
+        //document.querySelector('.overlay_desktop').classList.add('active')
+        document.querySelector('.buttontask','#welcome').classList.add('active')
+        active.classList.add('active')
+    }
+    else if (currenttarget == 'win1'){
+        active.classList.add('active')
+        document.querySelector('.buttontask','#reciclebin').classList.add('active')
+    }
+
 }
+//Mensaje para vito: Lo has conseguido felicidades, Ahora estoy en tu codigo ::Ninjaxix00::
 
 function openwellcome(){
     if(document.querySelector('.overlay_desktop.active')){
         document.querySelector('.overlay_desktop').classList.remove('active')
-        document.querySelector('.buttontask').classList.remove('active')
+        document.querySelector('.buttontask','#welcome').classList.remove('active')
     }
 }
 
@@ -123,4 +133,11 @@ function maximizewellcome(){
 
     }  
     console.log("offset is: " + offsetX);
+}
+
+function showDiv(element){
+    let parent = element.parentNode.parentNode.id;
+    console.log(parent);
+    active = element.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+    console.log(element.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)
 }
