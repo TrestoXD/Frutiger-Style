@@ -715,14 +715,36 @@
     bottom: 0px;
 }
 
-.buttontask{
+/* Task Buttons */
+.buttontaskWL{
     opacity: 1;
     visibility: visible;
 }
 
-.buttontask.active{
+.buttontaskWL.active{
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
     opacity: 0;
     visibility: hidden;
+    position:absolute;
+}
+.buttontaskRB{
+    width: auto;
+    margin: auto;
+    padding: auto;
+    position:relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+.buttontaskRB.active{
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    visibility: hidden;
+    position:absolute;
 }
 
 .popup{

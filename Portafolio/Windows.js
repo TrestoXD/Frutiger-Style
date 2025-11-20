@@ -78,21 +78,21 @@ function closeWellcome(){
     console.log(currenttarget)
     if(currenttarget == 'win'){
         //document.querySelector('.overlay_desktop').classList.add('active')
-        document.querySelector('.buttontask','#welcome').classList.add('active')
+        document.querySelector('.buttontaskWL').classList.add('active')
         active.classList.add('active')
     }
     else if (currenttarget == 'win1'){
+        document.querySelector('.buttontaskRB').classList.add('active')
         active.classList.add('active')
-        document.querySelector('.buttontask','#reciclebin').classList.add('active')
     }
-
 }
 //Mensaje para vito: Lo has conseguido felicidades, Ahora estoy en tu codigo ::Ninjaxix00::
 
+//opening apps
 function openwellcome(){
     if(document.querySelector('.overlay_desktop.active')){
         document.querySelector('.overlay_desktop').classList.remove('active')
-        document.querySelector('.buttontask','#welcome').classList.remove('active')
+        document.querySelector('.buttontaskWL').classList.remove('active')
     }
 }
 
