@@ -7,12 +7,12 @@ let active;
 
 //Window 1
 let maximze_state;
-const win = document.getElementById('win')
+const winWL = document.getElementById('win')
 const card = document.getElementById('card')
 
 let maximze_state_1
 const card1 = document.getElementById('card1');
-const win1 = document.getElementById('win1');
+const winRB = document.getElementById('win1');
 
 //Listeners
 card1.addEventListener('mousedown', mouseDown)
@@ -31,7 +31,7 @@ function mouseDown(e){
 }
 
 function mouseMove(e){
-    if(e.target == win){
+    if(e.target == winWL){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
         
@@ -49,7 +49,7 @@ function mouseMove(e){
         card.style.left = offsetX;
         }
     }
-    else if(e.target == win1){
+    else if(e.target == winRB){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
         
@@ -65,7 +65,7 @@ function mouseMove(e){
         card1.style.height = 230 + 'px';
         card1.style.top = offsetY + 200
         card1.style.left = offsetX;
-    }
+        }
     }
 }
 
@@ -77,7 +77,6 @@ function mouseUp(e){
 function closeWellcome(){
     console.log(currenttarget)
     if(currenttarget == 'win'){
-        //document.querySelector('.overlay_desktop').classList.add('active')
         document.querySelector('.buttontaskWL').classList.add('active')
         active.classList.add('active')
     }
@@ -89,48 +88,73 @@ function closeWellcome(){
 //Mensaje para vito: Lo has conseguido felicidades, Ahora estoy en tu codigo ::Ninjaxix00::
 
 //opening apps
+
 function openwellcome(){
-    if(document.querySelector('.overlay_desktop.active')){
-        document.querySelector('.overlay_desktop').classList.remove('active')
-        document.querySelector('.buttontaskWL').classList.remove('active')
-    }
+    //if(document.querySelector('.overlay_desktop.active')){
+        document.getElementById('welcome').classList.remove('active')
+        document.getElementById('container').classList.remove('active')
+    //}
 }
 
+function onpenRecicleBin(){
+    //if(document.querySelector('.overlay_desktop.active')){
+        document.getElementById('reciclebin').classList.remove('active')
+        document.getElementById('container1').classList.remove('active')
+    //}
+}
+
+//minimize apps
 function minimizewellcome(){
     document.querySelector('.overlay_desktop').classList.add('active')
 }
 
+//maximinimize apps
 function maximinimizewellcome(){
     if(document.querySelector('.overlay_desktop.active')){
         document.querySelector('.overlay_desktop').classList.remove('active')
     }
 }
 
+//maximize apps
 function maximizewellcome(){
-
-    if(card.style.width == '100%'){
+    maximize(card, "WL");
+}
+function maximizeRecicleBin(){
+    maximize(card1, "RB");
+}
+let oldx = 100;
+let oldy = 100;
+function maximize(cards, tag){
+    //oldx = cards.style.width;
+    //oldy = cards.style.height;
+    console.log(oldx)
+    console.log('maxi' + tag)
+    if(cards.style.width == '100%'){
         maximze_state = true;
+        
     }
     else{
         maximze_state = false;
     }
 
-    if(maximze_state == false){
-        card.style.width = 100 + '%';
-        card.style.height = 100 + '%';
-        offsetX = card.style.left;
-        offsetY = card.style.top;
-        card.style.top = 0 + 'px'
-        card.style.left = 0 + 'px';
-        document.getElementById('maxi').src="../Images/Icons/restore.svg"
+    if(maximze_state == true){
+        document.getElementById('maxi' + tag).src="../Images/Icons/maximize.svg"
+        cards.style.width = oldx;
+        cards.style.height = oldy;
+        cards.style.top = offsetY
+        cards.style.left = offsetX
+        console.log(oldy)
     }
     else{
-        document.getElementById('maxi').src="../Images/Icons/maximize.svg"
-        card.style.width = 500 + 'px';
-        card.style.height = 230 + 'px';
-        card.style.top = offsetY
-        card.style.left = offsetX
-
+        oldx = cards.style.width;
+        oldy = cards.style.height;
+        cards.style.width = 100 + '%';
+        cards.style.height = 100 + '%';
+        offsetX = cards.style.left;
+        offsetY = cards.style.top;
+        cards.style.top = 0 + 'px'
+        cards.style.left = 0 + 'px';
+        document.getElementById('maxi' + tag).src="../Images/Icons/restore.svg"
     }  
     console.log("offset is: " + offsetX);
 }

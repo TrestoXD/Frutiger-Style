@@ -8,7 +8,7 @@
 </head>
 <body class="nine-bk">
     <div class="Desktop">
-        <button class="item-papelera" id="icos1"><img src="../Images/Icons/w95_32.ico" alt="papelera" draggable="false"><samp>Papelera de reciclaje</samp></button>
+        <button class="item-papelera" ondblclick="onpenRecicleBin()" id="icos1"><img src="../Images/Icons/w95_32.ico" alt="papelera" draggable="false"><samp>Papelera de reciclaje</samp></button>
         <button class="item-papelera" id="icos2" style="top: 110px;"><img src="../Images/Icons/w95_5.ico" alt="carpeta llena" draggable="false"><samp> Sobre mí</samp></button>
         <button class="item-papelera" id="icos3" style="top: 210px;"><img src="../Images/Icons/w95_16.ico" alt="ordenador" draggable="false"><samp>MiOrdenador</samp></button>
         <button class="item-papelera" id="icos4" style="top: 310px;"><img src="../Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><samp>Resumen</samp></button>
@@ -27,7 +27,7 @@
                     <h1>Bienvenido</h1>
                     <div>
                         <button onclick="showDiv(this), closeWellcome()" id="win"><img src="../Images/Icons/close.svg" alt="X"  id="win"></button>
-                        <button onclick="showDiv(this), maximizewellcome()" id="win"><img src="../Images/Icons/maximize.svg" alt="O" id="maxi"></button>
+                        <button onclick="showDiv(this), maximizewellcome()" id="win"><img src="../Images/Icons/maximize.svg" alt="O" id="maxiWL"></button>
                         <button onclick="showDiv(this), minimizewellcome()" id="win"><img src="../Images/Icons/minimize.svg" alt="-"></button>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div id="container" class="overlay_desktop">
+    <div id="container1" class="overlay_desktop">
         <div class="content-95" style="width: 300px; height: 260px;" id="card1">
             <div id="reciclebin">
             <div class="content-inside-95">
@@ -46,7 +46,7 @@
                     <h1>Recicle Bin</h1>
                     <div>
                         <button onclick="showDiv(this), closeWellcome()"><img src="../Images/Icons/close.svg" alt="X" id="win1"></button>
-                        <button onclick="showDiv(this), maximizewellcome()"><img src="../Images/Icons/maximize.svg" alt="O" id="maxi"></button>
+                        <button onclick="showDiv(this), maximizeRecicleBin()"><img src="../Images/Icons/maximize.svg" alt="O" id="maxiRB"></button>
                         <button onclick="showDiv(this), minimizewellcome()"><img src="../Images/Icons/minimize.svg" alt="-"></button>
                     </div>
                 </div>
