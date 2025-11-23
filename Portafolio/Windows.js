@@ -68,7 +68,7 @@ function mouseMove(e){
         card.style.left = (card.offsetLeft - newX) + 'px'
         if(maximze_state == false){
         maximze_state = true;
-        document.getElementById('maxi').src="./Images/Icons/maximize.svg"
+        document.getElementById('maxi').src="../Images/Icons/maximize.svg"
         card.style.width = 500 + 'px';
         card.style.height = 230 + 'px';
         card.style.top = offsetY + 200
@@ -86,7 +86,7 @@ function mouseMove(e){
         card1.style.left = (card1.offsetLeft - newX) + 'px'
         if(maximze_state == false){
         maximze_state = true;
-        document.getElementById('maxi').src="./Images/Icons/maximize.svg"
+        document.getElementById('maxi').src="../Images/Icons/maximize.svg"
         card1.style.width = 500 + 'px';
         card1.style.height = 230 + 'px';
         card1.style.top = offsetY + 200
@@ -161,7 +161,7 @@ function maximize(cards, tag){
     }
 
     if(maximze_state == true){
-        document.getElementById('maxi' + tag).src="./Images/Icons/maximize.svg"
+        document.getElementById('maxi' + tag).src="../Images/Icons/maximize.svg"
         cards.style.width = oldx;
         cards.style.height = oldy;
         cards.style.top = offsetY
@@ -177,7 +177,7 @@ function maximize(cards, tag){
         offsetY = cards.style.top;
         cards.style.top = 0 + 'px'
         cards.style.left = 0 + 'px';
-        document.getElementById('maxi' + tag).src="./Images/Icons/restore.svg"
+        document.getElementById('maxi' + tag).src="../Images/Icons/restore.svg"
     }  
     console.log("offset is: " + offsetX);
 }
