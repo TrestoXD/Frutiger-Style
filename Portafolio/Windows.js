@@ -10,9 +10,35 @@ let maximze_state;
 const winWL = document.getElementById('win')
 const card = document.getElementById('card')
 
+//Window 2
 let maximze_state_1
 const card1 = document.getElementById('card1');
 const winRB = document.getElementById('win1');
+
+//Window 3
+let maximze_state_2
+const card2 = document.getElementById('card2');
+const winSM = document.getElementById('win2');
+
+//Window 4
+let maximze_state_3
+const card3 = document.getElementById('card3');
+const winMO = document.getElementById('win3');
+
+//Window 5
+let maximze_state_4
+const card4 = document.getElementById('card4');
+const winRE = document.getElementById('win4');
+
+//Window 6
+let maximze_state_5
+const card5 = document.getElementById('card5');
+const winPR = document.getElementById('win5');
+
+//Window 7
+let maximze_state_6
+const card6 = document.getElementById('card6');
+const winCO = document.getElementById('win6');
 
 //Listeners
 card1.addEventListener('mousedown', mouseDown)
@@ -88,30 +114,27 @@ function closeWellcome(){
 //Mensaje para vito: Lo has conseguido felicidades, Ahora estoy en tu codigo ::Ninjaxix00::
 
 //opening apps
-
-function openwellcome(){
-    //if(document.querySelector('.overlay_desktop.active')){
-        document.getElementById('welcome').classList.remove('active')
+function openapp(id, tag){
+    if(id == 0){
         document.getElementById('container').classList.remove('active')
-    //}
-}
-
-function onpenRecicleBin(){
-    //if(document.querySelector('.overlay_desktop.active')){
-        document.getElementById('reciclebin').classList.remove('active')
-        document.getElementById('container1').classList.remove('active')
-    //}
+        document.getElementById('button' + tag).classList.remove('active')
+    }else{
+        document.getElementById('container' + id).classList.remove('active')
+        document.getElementById('button' + tag).classList.remove('active')
+    }
 }
 
 //minimize apps
-function minimizewellcome(){
-    document.querySelector('.overlay_desktop').classList.add('active')
+function minimize(){
+    active.classList.add('active')
 }
 
 //maximinimize apps
-function maximinimizewellcome(){
-    if(document.querySelector('.overlay_desktop.active')){
-        document.querySelector('.overlay_desktop').classList.remove('active')
+function maximinimize(id){
+    if(id == 0){
+        document.getElementById('container').classList.remove('active')
+    }else{
+        document.getElementById('container' + id).classList.remove('active')
     }
 }
 

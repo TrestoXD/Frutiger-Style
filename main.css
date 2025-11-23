@@ -549,8 +549,32 @@
     border-bottom: 1px solid #c3c3c3;
 
     background-color: #c3c3c3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
 }
-
+.butt-95{
+    font-size: medium;
+    background-color: #00000000;
+    border: #00000000;  
+    padding-top: 3px;
+    padding-left: 8px;  
+}
+.divcontent-95{
+    display: flexbox;
+    padding: 0px;
+    border-style:solid;
+    margin: 5px;
+}
+.divcontentfilesinfo{
+    display: flex;
+}
+.Contentfiles-95{
+    background-color: white;
+    height: max-content;
+}
+.bottomcontentinfo-95{
+    display: flex;
+}
 
 .content{
     margin-bottom: 15px;
