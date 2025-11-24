@@ -71,6 +71,27 @@
         </div>
     </div>
 
+    <!-- Sobre mi -->
+
+    <div id="container2" class="overlay_desktop active">
+        <div class="content-95" style="width: 500px; height: 230px;" id="card2">
+            <div id="welcome">
+            <div class="content-inside-95">
+                <div class="title-95" id="win2"> 
+                    <h1>Bienvenido</h1>
+                    <div>
+                        <button onclick="showDiv(this), closeWellcome()" id="win2"><img src="./Images/Icons/close.svg" alt="X"  id="win"></button>
+                        <button onclick="showDiv(this), maximizewellcome()" id="win2"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiSM"></button>
+                        <button onclick="showDiv(this), minimize()" id="win2"><img src="./Images/Icons/minimize.svg" alt="-"></button>
+                    </div>
+                </div>
+                <h2 class="subtitle-95">Sobre mi</h2>
+                <hr class="spacing">
+                <p class="text"></p>
+            </div>
+            </div>
+        </div>
+    </div>
 
 </div>
     <div id="sidemen" class="overlay_taskbar">
@@ -86,7 +107,7 @@
 </body>
 <footer class="footer-95">
     <div>
-        <button onclick="sidebarmenu()"><img src="./Images/Icons/w95_40.ico" alt=""> <span>Start</span></button>
+        <button onclick="sidebarmenu()" id="buttonstarting"><img src="./Images/Icons/w95_40.ico" alt="" id="buttonstarting"> <span id="buttonstarting">Start</span></button>
         <button onclick="maximinimize(0)" class="buttontaskWL" id="buttonWL" ><span>Welcome</span></button>
         <button onclick="maximinimize(1)" class="buttontaskRB active" id="buttonRB" ><span>RecicleBin</span></button>
     </div>
