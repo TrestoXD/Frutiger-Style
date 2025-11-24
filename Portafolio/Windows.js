@@ -5,6 +5,9 @@ let clicked;
 let currenttarget;
 let active;
 
+let maximizeimg = "../Images/Icons/maximize.svg";
+let minimizeimg = "../Images/Icons/minimize.svg";
+
 //Window 1
 let maximze_state;
 const winWL = document.getElementById('win')
@@ -68,7 +71,7 @@ function mouseMove(e){
         card.style.left = (card.offsetLeft - newX) + 'px'
         if(maximze_state == false){
         maximze_state = true;
-        document.getElementById('maxi').src="./Images/Icons/maximize.svg"
+        document.getElementById('maxi' + 'WL').src=maximize
         card.style.width = 500 + 'px';
         card.style.height = 230 + 'px';
         card.style.top = offsetY + 200
@@ -86,7 +89,7 @@ function mouseMove(e){
         card1.style.left = (card1.offsetLeft - newX) + 'px'
         if(maximze_state == false){
         maximze_state = true;
-        document.getElementById('maxi').src="./Images/Icons/maximize.svg"
+        document.getElementById('maxi' + 'RB').src=maximize
         card1.style.width = 500 + 'px';
         card1.style.height = 230 + 'px';
         card1.style.top = offsetY + 200
