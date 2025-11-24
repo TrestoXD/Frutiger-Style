@@ -12,37 +12,37 @@ let minimizeimg = "../Images/Icons/minimize.svg";
 let maximze_state;
 const winWL = document.getElementById('win')
 const card = document.getElementById('card')
-
+let enablemoving = false;
 //Window 2
 let maximze_state_1
 const card1 = document.getElementById('card1');
 const winRB = document.getElementById('win1');
-
+let enablemoving1 = false;
 //Window 3
 let maximze_state_2
 const card2 = document.getElementById('card2');
 const winSM = document.getElementById('win2');
-
+let enablemoving2 = false;
 //Window 4
 let maximze_state_3
 const card3 = document.getElementById('card3');
 const winMO = document.getElementById('win3');
-
+let enablemoving3 = false;
 //Window 5
 let maximze_state_4
 const card4 = document.getElementById('card4');
 const winRE = document.getElementById('win4');
-
+let enablemoving4 = false;
 //Window 6
 let maximze_state_5
 const card5 = document.getElementById('card5');
 const winPR = document.getElementById('win5');
-
+let enablemoving5 = false;
 //Window 7
 let maximze_state_6
 const card6 = document.getElementById('card6');
 const winCO = document.getElementById('win6');
-
+let enablemoving6 = false;
 //Listeners
 card1.addEventListener('mousedown', mouseDown)
 card.addEventListener('mousedown', mouseDown)
@@ -57,10 +57,20 @@ function mouseDown(e){
     }
     currenttarget = e.target.id;
     //showDiv(e);
+    if(e.target == winWL){
+        enablemoving = true;
+        enablemoving1 = false;
+    } else if(e.target == winRB){
+        enablemoving = false;
+        enablemoving1 = true;
+    } else{
+        enablemoving = false;
+        enablemoving1 = false;
+    }
 }
 
 function mouseMove(e){
-    if(e.target == winWL){
+    if(enablemoving == true){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
         
@@ -72,13 +82,13 @@ function mouseMove(e){
         if(maximze_state == false){
         maximze_state = true;
         document.getElementById('maxi' + 'WL').src=maximize
-        card.style.width = 500 + 'px';
-        card.style.height = 230 + 'px';
+        card.style.width = oldx;
+        card.style.height = oldy;
         card.style.top = offsetY + 200
         card.style.left = offsetX;
         }
     }
-    else if(e.target == winRB){
+    else if(enablemoving1 == true){
         newX = startX - e.clientX 
         newY = startY - e.clientY 
         
@@ -90,8 +100,8 @@ function mouseMove(e){
         if(maximze_state == false){
         maximze_state = true;
         document.getElementById('maxi' + 'RB').src=maximize
-        card1.style.width = 500 + 'px';
-        card1.style.height = 230 + 'px';
+        card1.style.width = oldx;
+        card1.style.height = oldy;
         card1.style.top = offsetY + 200
         card1.style.left = offsetX;
         }

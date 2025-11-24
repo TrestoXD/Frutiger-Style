@@ -10,7 +10,11 @@ oncontextmenu = (e) => {
         }
         menu.onmouseleave = () => rightmenu.outerHTML = '', onmenu = false;
         if(e.target.closest(".item-papelera"))
-        menu.innerHTML = "<p>Open</p><p>Add to Zip</p><hr></hr> <p>Send To</p> <hr></hr> <p>Cut</p><p>Copy</p> <hr></hr> <p>Create Shotcut</p> <p>Delete</p> <p>Rename</p> <hr></hr> <p>Properties</p>"
+            if(e.target.closest("#icos1")){
+                        menu.innerHTML = "<p>Explore</p><p>Open</p><p>Print</p><p>Empty Recycle Bin</p> <hr></hr> <p>Paste</p> <hr></hr> <p>Create Shortcut</p> <hr></hr> <p>Properties</p>"
+            }
+            else{
+        menu.innerHTML = "<p>Open</p><p>Add to Zip</p><hr></hr> <p>Send To</p> <hr></hr> <p>Cut</p><p>Copy</p> <hr></hr> <p>Create Shotcut</p> <p>Delete</p> <p>Rename</p> <hr></hr> <p>Properties</p>"}
         else{
         menu.innerHTML = "<p>Arrange Icons</p><p>Line Up Icons</p> <hr></hr> <p>Paste</p><p>Paste Shortcut</p><p>Undo Delete</p> <hr></hr> <p>New</p> <hr></hr> <p>Properties</p>"
         }
