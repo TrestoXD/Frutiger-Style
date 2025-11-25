@@ -71,40 +71,29 @@ function mouseDown(e){
 
 function mouseMove(e){
     if(enablemoving == true){
-        newX = startX - e.clientX 
-        newY = startY - e.clientY 
-        
-        startX = e.clientX
-        startY = e.clientY
-
-        card.style.top = (card.offsetTop - newY) + 'px'
-        card.style.left = (card.offsetLeft - newX) + 'px'
-        if(maximze_state == false){
-        maximze_state = true;
-        document.getElementById('maxi' + 'WL').src=maximize
-        card.style.width = oldx;
-        card.style.height = oldy;
-        card.style.top = offsetY + 200
-        card.style.left = offsetX;
-        }
+        mouseMoving(e,card,'WL');
     }
     else if(enablemoving1 == true){
-        newX = startX - e.clientX 
-        newY = startY - e.clientY 
-        
-        startX = e.clientX
-        startY = e.clientY
+        mouseMoving(e,card1,'RB');
+    }
+}
 
-        card1.style.top = (card1.offsetTop - newY) + 'px'
-        card1.style.left = (card1.offsetLeft - newX) + 'px'
-        if(maximze_state == false){
-        maximze_state = true;
-        document.getElementById('maxi' + 'RB').src=maximize
-        card1.style.width = oldx;
-        card1.style.height = oldy;
-        card1.style.top = offsetY + 200
-        card1.style.left = offsetX;
-        }
+function mouseMoving(e, cards, tag){
+    newX = startX - e.clientX 
+    newY = startY - e.clientY 
+        
+    startX = e.clientX
+    startY = e.clientY
+
+    cards.style.top = (cards.offsetTop - newY) + 'px'
+    cards.style.left = (cards.offsetLeft - newX) + 'px'
+    if(maximze_state == false){
+    maximze_state = true;
+    document.getElementById('maxi' + tag).src=maximize
+    cards.style.width = oldx;
+    cards.style.height = oldy;
+    cards.style.top = offsetY + 200
+    cards.style.left = offsetX;
     }
 }
 

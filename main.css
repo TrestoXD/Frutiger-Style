@@ -960,7 +960,44 @@
 
 }
 
+#rightmenu > button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 2px;
+
+}
+
 #rightmenu > p:hover {
     background: #000082;
     color: white;
+}
+
+.content-inside-95-error {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+
+    border-style:solid;
+    border-width: 3px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
+
+    background-color: #c3c3c3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+
+    padding: 0px;
+    margin: 5px;
+
+    position: fixed;
+
+    top: 30%;
+    left: 40%;
+}
+
+.content-inside-95-error-flex {
+    padding: 5px;
+    display: flex;
 }
