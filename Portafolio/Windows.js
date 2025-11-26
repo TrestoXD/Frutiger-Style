@@ -4,16 +4,17 @@ let offsetY;
 let clicked;
 let currenttarget;
 let active;
+let currentWindow;
 
 let maximizeimg = "../Images/Icons/maximize.svg";
 let minimizeimg = "../Images/Icons/minimize.svg";
 
-//Window 1
+//Window 1 BIENVENIDO
 let maximze_state;
-const winWL = document.getElementById('win')
-const card = document.getElementById('card')
-let enablemoving = false;
-//Window 2
+const winWL = document.getElementById('win0')
+const card = document.getElementById('card0')
+let enablemoving0 = false;
+//Window 2 PAPELERA
 let maximze_state_1
 const card1 = document.getElementById('card1');
 const winRB = document.getElementById('win1');
@@ -23,7 +24,7 @@ let maximze_state_2
 const card2 = document.getElementById('card2');
 const winSM = document.getElementById('win2');
 let enablemoving2 = false;
-//Window 4
+//Window 4 RESUMEN
 let maximze_state_3
 const card3 = document.getElementById('card3');
 const winMO = document.getElementById('win3');
@@ -44,37 +45,66 @@ const card6 = document.getElementById('card6');
 const winCO = document.getElementById('win6');
 let enablemoving6 = false;
 //Listeners
+card4.addEventListener('mousedown', mouseDown)
 card1.addEventListener('mousedown', mouseDown)
 card.addEventListener('mousedown', mouseDown)
 
 function mouseDown(e){
-    if(e.target.classList.contains("title-95")){
+    if(e.target.classList.contains("title-95") || e.target.classList.contains("title-95-act")){
         startX = e.clientX
         startY = e.clientY
 
         document.addEventListener('mousemove', mouseMove)
         document.addEventListener('mouseup', mouseUp)
+        currentWindow = e.target.id
+        console.log(currentWindow)
+        CurrentWindowManager(currentWindow);
     }
     currenttarget = e.target.id;
     //showDiv(e);
     if(e.target == winWL){
-        enablemoving = true;
+        enablemoving0 = true;
         enablemoving1 = false;
+        enablemoving2 = false;
+        enablemoving3 = false;
+        enablemoving4 = false;
+        enablemoving5 = false;
+        enablemoving6 = false;
     } else if(e.target == winRB){
-        enablemoving = false;
+        enablemoving0 = false;
         enablemoving1 = true;
-    } else{
-        enablemoving = false;
+        enablemoving2 = false;
+        enablemoving3 = false;
+        enablemoving4 = false;
+        enablemoving5 = false;
+        enablemoving6 = false;
+    }else if(e.target == winRE){
+        enablemoving0 = false;
         enablemoving1 = false;
+        enablemoving2 = false;
+        enablemoving3 = false;
+        enablemoving4 = true;
+        enablemoving5 = false;
+        enablemoving6 = false;
+    } else{
+        enablemoving0 = false;
+        enablemoving1 = false;
+        enablemoving2 = false;
+        enablemoving3 = false;
+        enablemoving4 = false;
+        enablemoving5 = false;
+        enablemoving6 = false;
     }
 }
 
 function mouseMove(e){
-    if(enablemoving == true){
+    if(enablemoving0 == true){
         mouseMoving(e,card,'WL');
     }
     else if(enablemoving1 == true){
         mouseMoving(e,card1,'RB');
+    } else if(enablemoving4 == true){
+        mouseMoving(e,card4,'RE');
     }
 }
 
@@ -104,12 +134,15 @@ function mouseUp(e){
 
 function closeWellcome(){
     console.log(currenttarget)
-    if(currenttarget == 'win'){
+    if(currenttarget == 'win0'){
         document.querySelector('.buttontaskWL').classList.add('active')
         active.classList.add('active')
     }
     else if (currenttarget == 'win1'){
         document.querySelector('.buttontaskRB').classList.add('active')
+        active.classList.add('active')
+    }else if(currenttarget == 'win4'){
+        document.querySelector('.buttontaskRE').classList.add('active')
         active.classList.add('active')
     }
 }
@@ -117,13 +150,9 @@ function closeWellcome(){
 
 //opening apps
 function openapp(id, tag){
-    if(id == 0){
-        document.getElementById('container').classList.remove('active')
-        document.getElementById('button' + tag).classList.remove('active')
-    }else{
-        document.getElementById('container' + id).classList.remove('active')
-        document.getElementById('button' + tag).classList.remove('active')
-    }
+    document.getElementById( 'card' + id).classList.remove('active')
+    document.getElementById('button' + tag).classList.remove('active')
+    console.log("Applicacion abierta correctamente")
 }
 
 //minimize apps
@@ -133,11 +162,7 @@ function minimize(){
 
 //maximinimize apps
 function maximinimize(id){
-    if(id == 0){
-        document.getElementById('container').classList.remove('active')
-    }else{
-        document.getElementById('container' + id).classList.remove('active')
-    }
+    document.getElementById('container' + id).classList.remove('active')
 }
 
 //maximize apps
@@ -147,6 +172,10 @@ function maximizewellcome(){
 function maximizeRecicleBin(){
     maximize(card1, "RB");
 }
+function maximizeResumen(){
+    maximize(card4, "RE");
+}
+
 let oldx = 100;
 let oldy = 100;
 function maximize(cards, tag){
@@ -184,9 +213,26 @@ function maximize(cards, tag){
     console.log("offset is: " + offsetX);
 }
 
+// Show Div
 function showDiv(element){
     let parent = element.parentNode.parentNode.id;
     console.log(parent);
-    active = element.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-    console.log(element.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)
+    active = element.parentNode.parentNode.parentNode.parentNode.parentNode;
+    console.log(active)
+}
+
+// Current WindowManager
+function CurrentWindowManager(window){
+    for (let i = 0; i <= 6; i++) {
+        if('win' + i == window){
+            console.log("ski" + i);
+            if(document.getElementById('win' + i).classList.contains("title-95")){
+                console.log("FINDED")
+                document.getElementById('win' + i).classList.replace("title-95","title-95-act")
+            }
+        }
+        else{
+            console.log("kno" + i);
+        }
+    }
 }
