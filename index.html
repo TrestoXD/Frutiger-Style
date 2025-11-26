@@ -40,7 +40,7 @@
         </div>
 
     <!-- Recicle Bin -->
-        <div class="content-95 active" style="width: 300px; height: 260px;" id="card1">
+        <div class="content-95 active" style="width: 300px; height: auto;" id="card1">
             <div class="content-inside-95">
                 <div class="title-95" id="win1" draggable="false"> 
                     <h1 draggable="false">Recicle Bin</h1>
@@ -50,13 +50,16 @@
                         <button onclick="showDiv(this), minimize()" draggable="false" id="win1"><img src="./Images/Icons/minimize.svg" alt="-" draggable="false"></button>
                     </div>
                 </div>
-                <button class="butt-95">File</button>
-                <button class="butt-95">Edit</button>
-                <button class="butt-95">View</button>
-                <button class="butt-95">Help</button>
+                <div class="inside-row">
+                    <button class="textrow">File</button> 
+                    <button class="textrow">Edit</button> 
+                    <button class="textrow">View</button> 
+                    <button class="textrow" onclick="menuerror('Si encuentras un error contactame!')">Help</button>
+                </div>
                 <div class="divcontent-95">
                     <div class="divcontentfilesinfo">
-                        <p>Name</p><p>Original Location</p> <p>Date deleted</p> <p> Type</p> <p>Size</p></div>
+                        <p>Name</p><p>Original Location</p> 
+                    </div>
                     <div class="Contentfiles-95">
                         <p>s</p>
                     </div>
@@ -162,16 +165,16 @@
     </div>
 </div>
 <!-- TASKBAR -->
-    <div id="sidemen" class="overlay_taskbar">
-        <div class="content-95" style="width: 200px; height: 400px;" id="card">
-            <div class="content-inside-95" style="height: 99.5%;">
-                <div class="windows95-taskbar-menu-title">
-                    <img src="./Images/Icons/sidebar95.png" alt="">
-                </div>
-                <div class="windows95-taskbar-menu"></div>
+<div id="sidemen" class="overlay_taskbar">
+    <div class="content-95" style="width: 200px; height: 400px;" id="card">
+        <div class="content-inside-95" style="height: 99.5%;">
+            <div class="windows95-taskbar-menu-title">
+                <img src="./Images/Icons/sidebar95.png" alt="" draggable="false">
             </div>
+            <div class="windows95-taskbar-menu"></div>
         </div>
     </div>
+</div>
 </body>
 <footer class="footer-95">
     <div>

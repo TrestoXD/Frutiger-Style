@@ -29,7 +29,7 @@ addEventListener("mouseup", (e) => {
     let current = e.target.getAttribute('class');
     //console.log(current)
 
-    if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting"){
+    if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png"){
         console.log("si");
     }
     else{

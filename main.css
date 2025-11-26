@@ -593,9 +593,6 @@
 }
 
 .content-inside-95{
-    position: relative;
-    display: flex;
-    flex-direction: column;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -615,20 +612,28 @@
     padding-left: 8px;  
 }
 .divcontent-95{
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     padding: 0px;
     border-style:solid;
     margin: 5px;
+    line-height: 0px;
 }
 .divcontentfilesinfo{
     display: flex;
 }
 .Contentfiles-95{
     background-color: white;
-    height: max-content;
+    height: 100px;
 }
 .bottomcontentinfo-95{
+    line-height: 0px;
     display: flex;
+}
+.bottomcontentinfo-95 > p{
+    border: solid;
+    border-width: 1px;
+    border-color: black;
 }
 
 .content{
@@ -672,8 +677,8 @@
 .content-95{
     position: fixed;
     margin: 0px;
-    background:#a0a0a0;
     border-width:3px;
+    border-bottom-width: 4px;
     border-color:#FFFFFF #000000 #000000 #FFFFFF;
     border-style:solid;
     padding:0px;
@@ -774,7 +779,7 @@
 }
 
 .windows95-taskbar-menu-title{
-    background-color: gray;
+    background-color: #7b7d7b;
     width: 50px;
     height: 100%;
     border-width: 0px;
@@ -1161,7 +1166,7 @@
     margin: 3px;
     padding: 2px;
     background-color: white;
-    height: 100vh;
+    height: fit-content;
     width: 97%;
 }
 .files-explorer-items{
