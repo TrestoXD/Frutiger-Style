@@ -9,11 +9,11 @@
 <body class="nine-bk">
     <div class="Desktop">
         <button class="item-papelera" ondblclick="openapp(1,'RB')" id="icos1"><img src="./Images/Icons/w95_32.ico" alt="papelera" draggable="false"><samp>Papelera de reciclaje</samp></button>
-        <button class="item-papelera" id="icos2" style="top: 110px;"><img src="./Images/Icons/w95_5.ico" alt="carpeta llena" draggable="false"><samp> Sobre mí</samp></button>
-        <button class="item-papelera" id="icos3" style="top: 210px;"><img src="./Images/Icons/w95_16.ico" alt="ordenador" draggable="false"><samp>MiOrdenador</samp></button>
+        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos2" style="top: 110px;"><img src="./Images/Icons/w95_5.ico" alt="carpeta llena" draggable="false"><samp> Sobre mí</samp></button>
+        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos3" style="top: 210px;"><img src="./Images/Icons/w95_16.ico" alt="ordenador" draggable="false"><samp>MiOrdenador</samp></button>
         <button class="item-papelera" ondblclick="openapp(4,'RE')" id="icos4" style="top: 310px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><samp>Resumen</samp></button>
-        <button class="item-papelera" id="icos5" style="top: 410px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><samp>Proyectos</samp></button>
-        <button class="item-papelera" id="icos6" style="top: 510px;"><img src="./Images/Icons/w95_70.ico" alt="correo" draggable="false" draggable="false"><samp>Correo</samp></button>
+        <button class="item-papelera" ondblclick="openapp(5,'PR')" id="icos5" style="top: 410px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><samp>Proyectos</samp></button>
+        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos6" style="top: 510px;"><img src="./Images/Icons/w95_70.ico" alt="correo" draggable="false" draggable="false"><samp>Correo</samp></button>
         <button class="item-papelera" ondblclick="openapp(0,'WL')" id="icos7" style="top: 610px;"><img src="./Images/Icons/w95_1.ico" alt="bienvenido" draggable="false"><samp>Bienvenido .bat</samp></button>
         <!-- <div class="item-papelera" id="icos">
             <img src="../Images/Icons/w95_32.ico" alt="papelera" class="itema" draggable="false"><samp class="itema">Papelera de reciclaje</samp>
@@ -23,8 +23,7 @@
     <div id="container" class="overlay_desktop">
 
         <!-- Wellcome -->
-        <div class="content-95 active" style="width: 500px; height: 230px;" id="card0">
-            <div id="welcome">
+        <div class="content-95" style="width: 500px; height: 230px;" id="card0">
             <div class="content-inside-95">
                 <div class="title-95" id="win0" draggable="false"> 
                     <h1 draggable="false">Bienvenido</h1>
@@ -38,14 +37,72 @@
                 <hr class="spacing">
                 <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
             </div>
+        </div>
+
+    <!-- Recicle Bin -->
+        <div class="content-95 active" style="width: 300px; height: 260px;" id="card1">
+            <div class="content-inside-95">
+                <div class="title-95" id="win1" draggable="false"> 
+                    <h1 draggable="false">Recicle Bin</h1>
+                    <div>
+                        <button onclick="showDiv(this), closeWellcome()" draggable="false" id="win1"><img src="./Images/Icons/close.svg" alt="X" id="win1" draggable="false"></button>
+                        <button onclick="showDiv(this), maximizeRecicleBin()" draggable="false" id="win1"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiRB" draggable="false"></button>
+                        <button onclick="showDiv(this), minimize()" draggable="false" id="win1"><img src="./Images/Icons/minimize.svg" alt="-" draggable="false"></button>
+                    </div>
+                </div>
+                <button class="butt-95">File</button>
+                <button class="butt-95">Edit</button>
+                <button class="butt-95">View</button>
+                <button class="butt-95">Help</button>
+                <div class="divcontent-95">
+                    <div class="divcontentfilesinfo">
+                        <p>Name</p><p>Original Location</p> <p>Date deleted</p> <p> Type</p> <p>Size</p></div>
+                    <div class="Contentfiles-95">
+                        <p>s</p>
+                    </div>
+                </div>
+                <div class="bottomcontentinfo-95">
+                    <p>0 object(s)</p> <p>0 bytes</p>
+                </div> 
             </div>
         </div>
 
         <!-- Sobre mi -->
+        <div class="content-95 active" style="width: 500px; height: 230px;" id="card2">
+            <div class="content-inside-95">
+                <div class="title-95" id="win2" draggable="false"> 
+                    <h1 draggable="false">Template</h1>
+                    <div>
+                        <button onclick="showDiv(this), closeWellcome()" draggable="false" id="win2"><img src="./Images/Icons/close.svg" alt="X"  id="win2"></button>
+                        <button onclick="showDiv(this), maximizewellcome()" draggable="false" id="win2"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiSM"></button>
+                        <button onclick="showDiv(this), minimize()" draggable="false" id="win2"><img src="./Images/Icons/minimize.svg" alt="-"></button>
+                    </div>
+                </div>
+                <h2 class="subtitle-95">Template subtitle!</h2>
+                <hr class="spacing">
+                <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
+            </div>
+        </div>
+
+        <!--  Mi ordenador -->
+        <div class="content-95 active" style="width: 500px; height: 230px;" id="card3">
+            <div class="content-inside-95">
+                <div class="title-95" id="win3" draggable="false"> 
+                    <h1 draggable="false">Template</h1>
+                    <div>
+                        <button onclick="showDiv(this), closeWellcome()" draggable="false" id="win3"><img src="./Images/Icons/close.svg" alt="X"  id="win3"></button>
+                        <button onclick="showDiv(this), maximizewellcome()" draggable="false" id="win3"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiMO"></button>
+                        <button onclick="showDiv(this), minimize()" draggable="false" id="win3"><img src="./Images/Icons/minimize.svg" alt="-"></button>
+                    </div>
+                </div>
+                <h2 class="subtitle-95">Template subtitle!</h2>
+                <hr class="spacing">
+                <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
+            </div>
+        </div>
 
         <!-- Resumen -->
-        <div class="content-95" style="width: 600px; height: auto;" id="card4">
-            <div id="resumen">
+        <div class="content-95 active" style="width: 600px; height: auto;" id="card4">
             <div class="content-inside-95">
                 <div class="title-95" id="win4" draggable="false"> 
                     <h1>Resumen</h1>
@@ -65,41 +122,46 @@
                     <button class="files-explorer-items" ondblclick="window.open('./Documents/Curriculum 2025-2026.pdf', '_blank')"> <img draggable="false" src="./Images/Icons/w95_2.ico"> <p>CurriculumVitae.pdf</p></button>
                 </div>
             </div>
+        </div>
+
+
+    <!-- Proyectos -->
+        <div class="content-95 active" style="width: 500px; height: 230px;" id="card5">
+            <div id="proyectos">
+            <div class="content-inside-95">
+                <div class="title-95" id="win5" draggable="false"> 
+                    <h1 draggable="false">Template</h1>
+                    <div>
+                        <button onclick="showDiv(this), closeWellcome()" draggable="false" id="win5"><img src="./Images/Icons/close.svg" alt="X"  id="win5"></button>
+                        <button onclick="showDiv(this), maximizewellcome()" draggable="false" id="win5"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiPR"></button>
+                        <button onclick="showDiv(this), minimize()" draggable="false" id="win5"><img src="./Images/Icons/minimize.svg" alt="-"></button>
+                    </div>
+                </div>
+                <h2 class="subtitle-95">Template subtitle!</h2>
+                <hr class="spacing">
+                <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
+            </div>
+        </div>
+
+    <!-- Correo -->
+        <div class="content-95 active" style="width: 500px; height: 230px;" id="card6">
+            <div class="content-inside-95">
+                <div class="title-95" id="win6" draggable="false"> 
+                    <h1 draggable="false">Template</h1>
+                    <div>
+                        <button onclick="showDiv(this), closeWellcome()" draggable="false" id="win6"><img src="./Images/Icons/close.svg" alt="X"  id="win6"></button>
+                        <button onclick="showDiv(this), maximizewellcome()" draggable="false" id="win6"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiCO"></button>
+                        <button onclick="showDiv(this), minimize()" draggable="false" id="win6"><img src="./Images/Icons/minimize.svg" alt="-"></button>
+                    </div>
+                </div>
+                <h2 class="subtitle-95">Template subtitle!</h2>
+                <hr class="spacing">
+                <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
             </div>
         </div>
     </div>
-
-    <!-- Recicle Bin -->
-        <div class="content-95 active" style="width: 300px; height: 260px;" id="card1">
-            <div id="reciclebin">
-            <div class="content-inside-95">
-                <div class="title-95" id="win1" draggable="false"> 
-                    <h1 draggable="false">Recicle Bin</h1>
-                    <div>
-                        <button onclick="showDiv(this), closeWellcome()" draggable="false"><img src="./Images/Icons/close.svg" alt="X" id="win1" draggable="false"></button>
-                        <button onclick="showDiv(this), maximizeRecicleBin()" draggable="false"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiRB" draggable="false"></button>
-                        <button onclick="showDiv(this), minimize()" draggable="false"><img src="./Images/Icons/minimize.svg" alt="-" draggable="false"></button>
-                    </div>
-                </div>
-                <button class="butt-95">File</button>
-                <button class="butt-95">Edit</button>
-                <button class="butt-95">View</button>
-                <button class="butt-95">Help</button>
-                <div class="divcontent-95">
-                    <div class="divcontentfilesinfo">
-                        <p>Name</p><p>Original Location</p> <p>Date deleted</p> <p> Type</p> <p>Size</p></div>
-                    <div class="Contentfiles-95">
-                        <p>s</p>
-                    </div>
-                </div>
-                <div class="bottomcontentinfo-95">
-                    <p>0 object(s)</p> <p>0 bytes</p>
-                </div>
-            </div>
-        </div>
-
-<!-- TASKBAR -->
 </div>
+<!-- TASKBAR -->
     <div id="sidemen" class="overlay_taskbar">
         <div class="content-95" style="width: 200px; height: 400px;" id="card">
             <div class="content-inside-95" style="height: 99.5%;">
@@ -116,6 +178,8 @@
         <button onclick="sidebarmenu()" id="buttonstarting"><img src="./Images/Icons/w95_40.ico" alt="" id="buttonstarting"> <span id="buttonstarting">Start</span></button>
         <button onclick="maximinimize(0)" class="buttontaskWL" id="buttonWL" ><span>Welcome</span></button>
         <button onclick="maximinimize(1)" class="buttontaskRB active" id="buttonRB" ><span>RecicleBin</span></button>
+        <button onclick="maximinimize(2)" class="buttontaskSM active" id="buttonSM" ><span>Sobre mí</span></button>
+        <button onclick="maximinimize(3)" class="buttontaskMO active" id="buttonMO" ><span>Mi Ordenador</span></button>
         <button onclick="maximinimize(4)" class="buttontaskRE active" id="buttonRE" ><span>Resumen</span></button>
     </div>
     </div>

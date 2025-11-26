@@ -593,6 +593,9 @@
 }
 
 .content-inside-95{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -667,6 +670,7 @@
 }
 
 .content-95{
+    position: fixed;
     margin: 0px;
     background:#a0a0a0;
     border-width:3px;
@@ -839,6 +843,42 @@
     position:absolute;
 }
 
+.buttontaskSM{
+    width: auto;
+    margin: auto;
+    padding: auto;
+    position:relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+.buttontaskSM.active{
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    visibility: hidden;
+    position:absolute;
+}
+
+.buttontaskMO{
+    width: auto;
+    margin: auto;
+    padding: auto;
+    position:relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+.buttontaskMO.active{
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    visibility: hidden;
+    position:absolute;
+}
+
 .popup{
     justify-content: center;
     align-content: center;
@@ -860,8 +900,9 @@
 /* Taskbar */
 
 .footer-95{
+    box-sizing: border-box;
     position: absolute;
-    width: 99%;
+    width: 100%;
     bottom: 0;
     margin: 0px;
     padding: 3px;
@@ -944,7 +985,7 @@
 }
 
   #container{
-    background-color:#00808000 ;
+    background-color:#00000000 ;
     background-size: 4em 4em;
     top: 200px;
   }
@@ -1111,6 +1152,7 @@
 
 .files-explorer-interior{
     display: flex;
+    flex: 1;
     flex-direction: row;
     border-style:solid;
     border-width: 3px;
@@ -1119,7 +1161,7 @@
     margin: 3px;
     padding: 2px;
     background-color: white;
-    height: 97%;
+    height: 100vh;
     width: 97%;
 }
 .files-explorer-items{

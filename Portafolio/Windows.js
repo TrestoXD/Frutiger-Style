@@ -5,45 +5,39 @@ let clicked;
 let currenttarget;
 let active;
 let currentWindow;
+let enablemoving;
 
 let maximizeimg = "../Images/Icons/maximize.svg";
 let minimizeimg = "../Images/Icons/minimize.svg";
 
-//Window 1 BIENVENIDO
+//Window 0 BIENVENIDO
 let maximze_state;
 const winWL = document.getElementById('win0')
 const card = document.getElementById('card0')
-let enablemoving0 = false;
-//Window 2 PAPELERA
+//Window 1 PAPELERA
 let maximze_state_1
 const card1 = document.getElementById('card1');
 const winRB = document.getElementById('win1');
-let enablemoving1 = false;
-//Window 3
+//Window 2 Sobre mi
 let maximze_state_2
 const card2 = document.getElementById('card2');
 const winSM = document.getElementById('win2');
-let enablemoving2 = false;
-//Window 4 RESUMEN
+//Window 3 Mi ordenador
 let maximze_state_3
 const card3 = document.getElementById('card3');
 const winMO = document.getElementById('win3');
-let enablemoving3 = false;
-//Window 5
+//Window 4 RESUMEN
 let maximze_state_4
 const card4 = document.getElementById('card4');
 const winRE = document.getElementById('win4');
-let enablemoving4 = false;
-//Window 6
+//Window 5 Proyectos
 let maximze_state_5
 const card5 = document.getElementById('card5');
 const winPR = document.getElementById('win5');
-let enablemoving5 = false;
-//Window 7
+//Window 6 Correo
 let maximze_state_6
 const card6 = document.getElementById('card6');
 const winCO = document.getElementById('win6');
-let enablemoving6 = false;
 //Listeners
 card4.addEventListener('mousedown', mouseDown)
 card1.addEventListener('mousedown', mouseDown)
@@ -57,53 +51,27 @@ function mouseDown(e){
         document.addEventListener('mousemove', mouseMove)
         document.addEventListener('mouseup', mouseUp)
         currentWindow = e.target.id
+        currentcard = e.target.parentNode.parentNode.parentNode.id
+        console.log(currentcard)
         console.log(currentWindow)
         CurrentWindowManager(currentWindow);
+        enablemoving = currentWindow;
     }
     currenttarget = e.target.id;
     //showDiv(e);
-    if(e.target == winWL){
-        enablemoving0 = true;
-        enablemoving1 = false;
-        enablemoving2 = false;
-        enablemoving3 = false;
-        enablemoving4 = false;
-        enablemoving5 = false;
-        enablemoving6 = false;
-    } else if(e.target == winRB){
-        enablemoving0 = false;
-        enablemoving1 = true;
-        enablemoving2 = false;
-        enablemoving3 = false;
-        enablemoving4 = false;
-        enablemoving5 = false;
-        enablemoving6 = false;
-    }else if(e.target == winRE){
-        enablemoving0 = false;
-        enablemoving1 = false;
-        enablemoving2 = false;
-        enablemoving3 = false;
-        enablemoving4 = true;
-        enablemoving5 = false;
-        enablemoving6 = false;
-    } else{
-        enablemoving0 = false;
-        enablemoving1 = false;
-        enablemoving2 = false;
-        enablemoving3 = false;
-        enablemoving4 = false;
-        enablemoving5 = false;
-        enablemoving6 = false;
-    }
+
 }
 
 function mouseMove(e){
-    if(enablemoving0 == true){
+    if(enablemoving == 'win0'){
         mouseMoving(e,card,'WL');
-    }
-    else if(enablemoving1 == true){
+    }else if(enablemoving == 'win1'){
         mouseMoving(e,card1,'RB');
-    } else if(enablemoving4 == true){
+    }else if(enablemoving == 'win2'){
+        mouseMoving(e,card2,'SM');
+    }else if(enablemoving == 'win3'){
+        mouseMoving(e,card3,'MO');
+    }else if(enablemoving == 'win4'){
         mouseMoving(e,card4,'RE');
     }
 }
@@ -137,9 +105,11 @@ function closeWellcome(){
     if(currenttarget == 'win0'){
         document.querySelector('.buttontaskWL').classList.add('active')
         active.classList.add('active')
-    }
-    else if (currenttarget == 'win1'){
+    }else if (currenttarget == 'win1'){
         document.querySelector('.buttontaskRB').classList.add('active')
+        active.classList.add('active')
+    }else if (currenttarget == 'win2'){
+        document.querySelector('.buttontaskSM').classList.add('active')
         active.classList.add('active')
     }else if(currenttarget == 'win4'){
         document.querySelector('.buttontaskRE').classList.add('active')
@@ -162,7 +132,7 @@ function minimize(){
 
 //maximinimize apps
 function maximinimize(id){
-    document.getElementById('container' + id).classList.remove('active')
+    document.getElementById('card' + id).classList.remove('active')
 }
 
 //maximize apps
@@ -217,7 +187,7 @@ function maximize(cards, tag){
 function showDiv(element){
     let parent = element.parentNode.parentNode.id;
     console.log(parent);
-    active = element.parentNode.parentNode.parentNode.parentNode.parentNode;
+    active = element.parentNode.parentNode.parentNode.parentNode;
     console.log(active)
 }
 
@@ -226,13 +196,19 @@ function CurrentWindowManager(window){
     for (let i = 0; i <= 6; i++) {
         if('win' + i == window){
             console.log("ski" + i);
+            document.getElementById('card' + i ).style.zIndex = "1";
             if(document.getElementById('win' + i).classList.contains("title-95")){
                 console.log("FINDED")
                 document.getElementById('win' + i).classList.replace("title-95","title-95-act")
             }
         }
-        else{
+        else if('win' + i != window){
             console.log("kno" + i);
+            document.getElementById('card' + i).style.zIndex = "-1";
+            if(document.getElementById('win' + i).classList.contains("title-95-act")){
+                console.log("FINDED")
+                document.getElementById('win' + i).classList.replace("title-95-act","title-95")
+            }
         }
     }
 }
