@@ -834,82 +834,12 @@
 }
 
 /* Task Buttons */
-.buttontaskWL{
+.buttontask{
     opacity: 1;
     visibility: visible;
 }
 
-.buttontaskWL.active{
-    width: 0px;
-    margin: 0px;
-    padding: 0px;
-    opacity: 0;
-    visibility: hidden;
-    position:absolute;
-}
-.buttontaskRB{
-    width: auto;
-    margin: auto;
-    padding: auto;
-    position:relative;
-    opacity: 1;
-    visibility: visible;
-}
-
-.buttontaskRB.active{
-    width: 0px;
-    margin: 0px;
-    padding: 0px;
-    opacity: 0;
-    visibility: hidden;
-    position:absolute;
-}
-
-.buttontaskRE{
-    width: auto;
-    margin: auto;
-    padding: auto;
-    position:relative;
-    opacity: 1;
-    visibility: visible;
-}
-.buttontaskRE.active{
-    width: 0px;
-    margin: 0px;
-    padding: 0px;
-    opacity: 0;
-    visibility: hidden;
-    position:absolute;
-}
-
-.buttontaskSM{
-    width: auto;
-    margin: auto;
-    padding: auto;
-    position:relative;
-    opacity: 1;
-    visibility: visible;
-}
-
-.buttontaskSM.active{
-    width: 0px;
-    margin: 0px;
-    padding: 0px;
-    opacity: 0;
-    visibility: hidden;
-    position:absolute;
-}
-
-.buttontaskMO{
-    width: auto;
-    margin: auto;
-    padding: auto;
-    position:relative;
-    opacity: 1;
-    visibility: visible;
-}
-
-.buttontaskMO.active{
+.buttontask.active{
     width: 0px;
     margin: 0px;
     padding: 0px;
@@ -1210,7 +1140,8 @@
     padding: 2px;
     background-color: white;
     height: fit-content;
-    width: 97%;
+    width: calc( 100% - 17px);
+    height: 100%;
 }
 .files-explorer-items{
     padding: 0px;
