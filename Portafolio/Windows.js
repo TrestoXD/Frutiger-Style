@@ -24,7 +24,6 @@ document.onclick = function (e) {
     console.log(e.target)
 }
 
-
 // Mousedown
 function mouseDown(e){
     if(e.target.classList.contains("title-95") || e.target.classList.contains("title-95-act")){
@@ -56,7 +55,7 @@ function mouseMove(e){
 function mouseMoving(e, cards){
     newX = startX - e.clientX 
     newY = startY - e.clientY 
-        
+    
     startX = e.clientX
     startY = e.clientY
 
