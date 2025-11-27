@@ -73,6 +73,8 @@ function mouseMove(e){
         mouseMoving(e,card3,'MO');
     }else if(enablemoving == 'win4'){
         mouseMoving(e,card4,'RE');
+    }else if(enablemoving == 'win5'){
+        mouseMoving(e,card5,'PR');
     }
 }
 
@@ -114,6 +116,9 @@ function closeWellcome(){
     }else if(currenttarget == 'win4'){
         document.querySelector('.buttontaskRE').classList.add('active')
         active.classList.add('active')
+    }else if(currenttarget == 'win5'){
+        document.querySelector('.buttontaskPR').classList.add('active')
+        active.classList.add('active')
     }
 }
 //Mensaje para vito: Lo has conseguido felicidades, Ahora estoy en tu codigo ::Ninjaxix00::
@@ -144,6 +149,9 @@ function maximizeRecicleBin(){
 }
 function maximizeResumen(){
     maximize(card4, "RE");
+}
+function maximizeProyectos(){
+    maximize(card5, "PR")
 }
 
 let oldx = 100;

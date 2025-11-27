@@ -8,13 +8,13 @@
 </head>
 <body class="nine-bk">
     <div class="Desktop">
-        <button class="item-papelera" ondblclick="openapp(1,'RB')" id="icos1"><img src="./Images/Icons/w95_32.ico" alt="papelera" draggable="false"><samp>Papelera de reciclaje</samp></button>
-        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos2" style="top: 110px;"><img src="./Images/Icons/w95_5.ico" alt="carpeta llena" draggable="false"><samp> Sobre mí</samp></button>
-        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos3" style="top: 210px;"><img src="./Images/Icons/w95_16.ico" alt="ordenador" draggable="false"><samp>MiOrdenador</samp></button>
-        <button class="item-papelera" ondblclick="openapp(4,'RE')" id="icos4" style="top: 310px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><samp>Resumen</samp></button>
-        <button class="item-papelera" ondblclick="openapp(5,'PR')" id="icos5" style="top: 410px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><samp>Proyectos</samp></button>
-        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos6" style="top: 510px;"><img src="./Images/Icons/w95_70.ico" alt="correo" draggable="false" draggable="false"><samp>Correo</samp></button>
-        <button class="item-papelera" ondblclick="openapp(0,'WL')" id="icos7" style="top: 610px;"><img src="./Images/Icons/w95_1.ico" alt="bienvenido" draggable="false"><samp>Bienvenido .bat</samp></button>
+        <button class="item-papelera" ondblclick="openapp(1,'RB')" id="icos1"><img src="./Images/Icons/w95_32.ico" alt="papelera" draggable="false"><p>Papelera de reciclaje</p></button>
+        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos2" style="top: 110px;"><img src="./Images/Icons/w95_5.ico" alt="carpeta llena" draggable="false"><p> Sobre mí</p></button>
+        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos3" style="top: 210px;"><img src="./Images/Icons/w95_16.ico" alt="ordenador" draggable="false"><p>MiOrdenador</p></button>
+        <button class="item-papelera" ondblclick="openapp(4,'RE')" id="icos4" style="top: 310px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><p>Resumen</p></button>
+        <button class="item-papelera" ondblclick="openapp(5,'PR')" id="icos5" style="top: 410px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><p>Proyectos</p></button>
+        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos6" style="top: 510px;"><img src="./Images/Icons/w95_70.ico" alt="correo" draggable="false" draggable="false"><p>Correo</p></button>
+        <button class="item-papelera" ondblclick="openapp(0,'WL')" id="icos7" style="top: 610px;"><img src="./Images/Icons/w95_1.ico" alt="bienvenido" draggable="false"><p>Bienvenido .bat</p></button>
         <!-- <div class="item-papelera" id="icos">
             <img src="../Images/Icons/w95_32.ico" alt="papelera" class="itema" draggable="false"><samp class="itema">Papelera de reciclaje</samp>
         </div> -->
@@ -57,16 +57,18 @@
                     <button class="textrow" onclick="menuerror('Si encuentras un error contactame!')">Help</button>
                 </div>
                 <div class="divcontent-95">
-                    <div class="divcontentfilesinfo">
-                        <p>Name</p><p>Original Location</p> 
+                    <div class="bottomcontentinfo-95">
+                        <button>Name</button><button>Original Location</button> 
                     </div>
                     <div class="Contentfiles-95">
                         <p>s</p>
                     </div>
                 </div>
-                <div class="bottomcontentinfo-95">
-                    <p>0 object(s)</p> <p>0 bytes</p>
-                </div> 
+                <div class="divcontent-95 noborder">
+                    <div class="bottomcontentinfo-95">
+                    <button>0 object(s)</button> <button>0 bytes</button>
+                    </div> 
+                </div>
             </div>
         </div>
 
@@ -108,7 +110,7 @@
         <div class="content-95 active" style="width: 600px; height: auto;" id="card4">
             <div class="content-inside-95">
                 <div class="title-95" id="win4" draggable="false"> 
-                    <h1>Resumen</h1>
+                    <h1 draggable="false">Resumen</h1>
                     <div>
                         <button onclick="showDiv(this), closeWellcome()" id="win4" draggable="false"><img src="./Images/Icons/close.svg" alt="X"  id="win4" draggable="false"></button>
                         <button onclick="showDiv(this), maximizeResumen()" id="win4" draggable="false"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiRE" draggable="false"></button>
@@ -129,20 +131,25 @@
 
 
     <!-- Proyectos -->
-        <div class="content-95 active" style="width: 500px; height: 230px;" id="card5">
-            <div id="proyectos">
+        <div class="content-95 active" style="width: 600px; height: auto;" id="card5">
             <div class="content-inside-95">
                 <div class="title-95" id="win5" draggable="false"> 
-                    <h1 draggable="false">Template</h1>
+                <h1 draggable="false">Proyectos</h1>
                     <div>
-                        <button onclick="showDiv(this), closeWellcome()" draggable="false" id="win5"><img src="./Images/Icons/close.svg" alt="X"  id="win5"></button>
-                        <button onclick="showDiv(this), maximizewellcome()" draggable="false" id="win5"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiPR"></button>
-                        <button onclick="showDiv(this), minimize()" draggable="false" id="win5"><img src="./Images/Icons/minimize.svg" alt="-"></button>
+                        <button onclick="showDiv(this), closeWellcome()" id="win5" draggable="false"><img src="./Images/Icons/close.svg" alt="X"  id="win5" draggable="false"></button>
+                        <button onclick="showDiv(this), maximizeProyectos()" id="win5" draggable="false"><img src="./Images/Icons/maximize.svg" alt="O" id="maxiPR" draggable="false"></button>
+                        <button onclick="showDiv(this), minimize()" id="win5" draggable="false"><img src="./Images/Icons/minimize.svg" alt="-" draggable="false"></button>
                     </div>
                 </div>
-                <h2 class="subtitle-95">Template subtitle!</h2>
-                <hr class="spacing">
-                <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
+                <div class="inside-row">
+                    <button class="textrow">File</button> 
+                    <button class="textrow">Edit</button> 
+                    <button class="textrow">View</button> 
+                    <button class="textrow" onclick="menuerror('Si encuentras un error contactame!')">Help</button>
+                </div>
+                <div class="files-explorer-interior">
+                    <button class="files-explorer-items" ondblclick="window.open('./Documents/Curriculum 2025-2026.pdf', '_blank')"> <img draggable="false" src="./Images/Icons/w95_2.ico"> <p>CurriculumVitae.pdf</p></button>
+                </div>
             </div>
         </div>
 
@@ -184,6 +191,8 @@
         <button onclick="maximinimize(2)" class="buttontaskSM active" id="buttonSM" ><span>Sobre mí</span></button>
         <button onclick="maximinimize(3)" class="buttontaskMO active" id="buttonMO" ><span>Mi Ordenador</span></button>
         <button onclick="maximinimize(4)" class="buttontaskRE active" id="buttonRE" ><span>Resumen</span></button>
+        <button onclick="maximinimize(5)" class="buttontaskPR active" id="buttonPR" ><span>Proyectos</span></button>
+    </div>
     </div>
     </div>
 </footer>

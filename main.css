@@ -1,3 +1,14 @@
+/* FONT */
+
+@font-face {
+    font-family: MSSans;
+    src: url('./Otherassets/MS\ Sans\ Serif\ 8pt.ttf');
+}
+
+*{
+    font-family: MSSans;
+}
+
 /*TITLES*/
 
 .content-title{
@@ -220,13 +231,15 @@
     user-select: none;
     margin: 0;
     padding: 0px;
+    text-align: center;
+    vertical-align: middle;
 
     color: white;
     background-color: #8d8d8d;
 
     font-size: larger;
     font-weight: 300;
-    font-family: Tahoma;
+    font-family: MSSans;
 
     display: flex;
     justify-content: space-between;
@@ -234,6 +247,8 @@
 }
 
 .title-95-act{
+    text-align: center;
+    vertical-align: middle;
     user-select: none;
     margin: 0;
     padding: 0px;
@@ -243,7 +258,9 @@
 
     font-size: larger;
     font-weight: 300;
-    font-family: Tahoma;
+    font-family: MSSans;
+    text-align: center;
+    vertical-align: middle;
 
     display: flex;
     justify-content: space-between;
@@ -251,18 +268,24 @@
 }
 
 .title-95-act h1 {
+    line-height: 23px;
     margin: 0px;
     font-size: large;
     font-weight: 300;
-    font-family: Tahoma;
-    padding: 7px
+    font-family: MSSans;
+    padding: 7px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .title-95 h1 {
+    line-height: 23px;
+    text-align: center;
+    vertical-align: middle;
     margin: 0px;
     font-size: large;
     font-weight: 300;
-    font-family: Tahoma;
+    font-family: MSSans;
     padding: 7px
 }
 
@@ -276,7 +299,7 @@
     border-style:solid;
     font-size:15px;
     font-weight:bold;
-    font-family:Tahoma;
+    font-family:MSSans;
     text-align:right;
     text-decoration: none;
     color: black;
@@ -293,7 +316,7 @@
     border-style:solid;
     font-size:15px;
     font-weight:bold;
-    font-family:Tahoma;
+    font-family:MSSans;
     text-align:right;
     text-decoration: none;
     color: black;
@@ -317,7 +340,7 @@
 
     font-size: larger;
     font-weight: 300;
-    font-family: Tahoma;
+    font-family: MSSans;
 
     display: flex;
     justify-content: space-between;
@@ -326,7 +349,7 @@
     margin: 0%;
     font-size: larger;
     font-weight: 300;
-    font-family: Tahoma;
+    font-family: MSSans;
     padding: 5px
 }
 .title-me button {
@@ -338,7 +361,7 @@
     border-style:solid;
     font-size:15px;
     font-weight:bold;
-    font-family:Tahoma;
+    font-family:MSSans;
     text-align:center;
     text-decoration: none;
     color: black;
@@ -430,7 +453,7 @@
 
     font-size: x-large;
     font-weight: 400;
-    font-family: Helvetica;
+    font-family: MSSans;
 }
 
 /*TEXT*/
@@ -445,7 +468,7 @@
     margin: 15px;
     padding: 0;
 
-    font-family: Helvetica;
+    font-family: MSSans;
 }
 
 /*BUTTNOS*/
@@ -483,7 +506,7 @@
     border-style:solid;
     font-size:15px;
     font-weight:bold;
-    font-family:Tahoma;
+    font-family:MSSans;
     text-align:center;
     text-decoration: none;
     color: black;
@@ -550,7 +573,7 @@
     margin: 15px;
     padding: 0;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: MSSans;
 }
 /*UTIL*/
 
@@ -601,7 +624,7 @@
     border-bottom: 1px solid #c3c3c3;
 
     background-color: #c3c3c3;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: MSSans;
     font-size: medium;
 }
 .butt-95{
@@ -618,22 +641,33 @@
     border-style:solid;
     margin: 5px;
     line-height: 0px;
+    gap: 0px;
+}
+.noborder{
+    border-color: #00000000;
+    border-width: 0px;
 }
 .divcontentfilesinfo{
     display: flex;
 }
 .Contentfiles-95{
+    padding-left: 5px;
     background-color: white;
     height: 100px;
 }
 .bottomcontentinfo-95{
     line-height: 0px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
 }
-.bottomcontentinfo-95 > p{
+.bottomcontentinfo-95 > button{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    background-color: #00000000;
     border: solid;
-    border-width: 1px;
-    border-color: black;
+    border-width: 2px;
+    border-color:#FFFFFF #000000 #000000 #FFFFFF;
 }
 
 .content{
@@ -915,7 +949,7 @@
     border-color:#FFFFFF #c3c3c3 #c3c3c3 #FFFFFF;
     border-bottom: 0px;
     border-style:solid;
-    font-family: Helvetica;
+    font-family: MSSans;
 }
 
 .footer-95 button{
@@ -929,7 +963,7 @@
     border-style:solid;
     gap: 5px;
     height: 32px;
-    font-family: Helvetica;
+    font-family: MSSans;
 }
 .b-start-95:active{
     border-color:#000000 #fffcfc #ffffff #000000;
@@ -956,7 +990,7 @@
     position: fixed;
     display: flex;
     margin: 5px;
-    font-family: Helvetica, sans-serif;
+    font-family: MSSans;
     padding: 0px;
     background-size: 4em 4em;
 }
@@ -1031,6 +1065,15 @@
     color: white;
     text-align: center;
     opacity: 100%;
+    font-family: MSSans;
+    text-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.item-papelera samp{
+    font-family: MSSans;
+    text-wrap: wrap;
+    word-wrap: break-word;
 }
 
 .item-papelera.moving{
@@ -1057,7 +1100,7 @@
     background-color: ghostwhite;
     color: black;
     text-align: left;
-    font-family: Helvetica, sans-serif;
+    font-family: MSSans;
     cursor: pointer;
     border-color:#FFFFFF #000000 #000000 #FFFFFF;
     border-style: solid;
@@ -1103,7 +1146,7 @@
     border-color:#FFFFFF #000000 #000000 #FFFFFF;
 
     background-color: #c3c3c3;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: MSSans;
     font-size: medium;
 
     padding: 0px;
@@ -1131,7 +1174,7 @@
     padding: 5px;
 
     font-size: 15px;
-    font-family: Helvetica;
+    font-family: MSSans;
     background-color: #00000000;
     border: #00000000;
 }
