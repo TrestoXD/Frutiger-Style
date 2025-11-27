@@ -9,15 +9,23 @@ let enablemoving;
 let totalapp = 6;
 let maximze_state;
 
+localStorage.setItem("totalapps", totalapp);
+
 let maximizeimg = "./Images/Icons/maximize.svg";
 let minimizeimg = "./Images/Icons/minimize.svg";
 
-//Listeners
+// Listeners
 
 for (let i = 0; i <= totalapp; i++) {
     document.getElementById('card' + i).addEventListener('mousedown', mouseDown);
 }
 
+document.onclick = function (e) {
+    console.log(e.target)
+}
+
+
+// Mousedown
 function mouseDown(e){
     if(e.target.classList.contains("title-95") || e.target.classList.contains("title-95-act")){
         startX = e.clientX
@@ -34,7 +42,6 @@ function mouseDown(e){
     }
     currenttarget = e.target.id;
     //showDiv(e);
-
 }
 
 function mouseMove(e){
@@ -83,22 +90,6 @@ function closeWellcome(){
             active.classList.add('active')
         }
     }
-    //if(currenttarget == 'win0'){
-    //    document.querySelector('.buttontask0').classList.add('active')
-    //    active.classList.add('active')
-    //}else if (currenttarget == 'win1'){
-    //    document.querySelector('.buttontask1').classList.add('active')
-    //    active.classList.add('active')
-    //}else if (currenttarget == 'win2'){
-    //    document.querySelector('.buttontask2').classList.add('active')
-    //    active.classList.add('active')
-    //}else if(currenttarget == 'win4'){
-    //    document.querySelector('.buttontask4').classList.add('active')
-    //    active.classList.add('active')
-    //}else if(currenttarget == 'win5'){
-    //    document.querySelector('.buttontask5').classList.add('active')
-    //    active.classList.add('active')
-    //}
 }
 //Mensaje para vito: Lo has conseguido felicidades, Ahora estoy en tu codigo ::Ninjaxix00::
 
@@ -133,7 +124,6 @@ function maximize(e){
     console.log('maxi' + id)
     if(cardi.style.width == '100%'){
         maximze_state = true;
-        
     }
     else{
         maximze_state = false;

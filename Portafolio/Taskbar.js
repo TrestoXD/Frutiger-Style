@@ -31,11 +31,13 @@ addEventListener("mouseup", (e) => {
 
     if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png"){
         console.log("si");
+    }else if(e.target.getAttribute('id') == "desktop"){
+        console.log("Desktop clicked")
     }
     else{
         document.getElementById('sidemen').classList.remove('active');
         meg = false;
-        console.log("no");
+        //console.log("no");
     }
 }
 )

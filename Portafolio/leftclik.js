@@ -1,3 +1,5 @@
+localStorage.getItem("totalapps")
+
 oncontextmenu = (e) => {
     let rightmenudiv = document.getElementById("rightmenu");
     if(rightmenudiv === null){
@@ -32,6 +34,15 @@ function menuerror(errormessage){
         } 
         menuer.innerHTML = `<div class='content-inside-95-error' style='width: auto; height: auto;'> <div class='title-95' id='win'> <h1>Windows 95</h1><div><button onclick='closeerror()' id='win'><img src='./Images/Icons/close.svg' alt='X'  id='win'></button> </div> </div> <div class='content-inside-95-error-flex'> <img src='./Images/Icons/msg_warning-0.ico' style='width: 50px; height: 50px;'> <p>${errormessage}</p> </div> </div>`
         document.body.appendChild(menuer)
+    }
+    let errortaskbar = document.getElementById("errortaskbar");
+    if(errortaskbar === null){
+        let menuer = document = document.createElement("button")
+        menuer.id = "errortaskbar"
+        if(menuer.parentNode){
+            menuer.parentNode.removeChild(menuer);
+        }    
+        menuer.innerHTML = `<button onclick="maximinimize(6)" class="buttontask active" id="button6" ><span>Correo</span></button>`
     }
 }
 
