@@ -44,7 +44,7 @@ function mouseDown(e){
 }
 
 function mouseMove(e){
-    for (let i = 0; i <= 6; i++) {
+    for (let i = 0; i <= totalapp; i++) {
         if(enablemoving == ('win' + i)){
             mouseMoving(e,('card' + i))
             //console.log('card'+i)
@@ -97,6 +97,7 @@ function openapp(id){
     document.getElementById( 'card' + id).classList.remove('active')
     document.getElementById('button' + id).classList.remove('active')
     console.log("Applicacion abierta correctamente")
+    CurrentWindowManager('win'+ id);
 }
 
 //minimize apps
@@ -119,6 +120,7 @@ function maximize(e){
     console.log("The id is: "+ id);
     //oldx = cards.style.width;
     //oldy = cards.style.height;
+    CurrentWindowManager('win'+ id)
     console.log(oldx)
     console.log('maxi' + id)
     if(cardi.style.width == '100%'){
@@ -160,7 +162,7 @@ function showDiv(element){
 
 // Current WindowManager
 function CurrentWindowManager(window){
-    for (let i = 0; i <= 6; i++) {
+    for (let i = 0; i <= totalapp; i++) {
         if('win' + i == window){
             console.log("ski" + i);
             document.getElementById('card' + i ).style.zIndex = "1";

@@ -621,8 +621,6 @@
     width: 100%;
     height: 100%;
 
-    border-bottom: 1px solid #c3c3c3;
-
     background-color: #c3c3c3;
     font-family: MSSans;
     font-size: medium;
@@ -712,7 +710,6 @@
     position: fixed;
     margin: 0px;
     border-width:3px;
-    border-bottom-width: 4px;
     border-color:#FFFFFF #000000 #000000 #FFFFFF;
     border-style:solid;
     padding:0px;
