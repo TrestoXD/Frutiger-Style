@@ -29,7 +29,7 @@ addEventListener("mouseup", (e) => {
     let current = e.target.getAttribute('class');
     //console.log(current)
 
-    if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png"){
+    if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png" || e.target.getAttribute("id") === "rightmenu"){
         console.log("si");
     }else if(e.target.getAttribute('id') == "desktop"){
         console.log("Desktop clicked")
@@ -61,12 +61,12 @@ function createUIfolder(spax, spay){
     if(rightmenudiv === null){
         let menu = document.createElement("div")
         menu.id = "rightmenu"
-        menu.style = `top:${spay}px;left:${spax}px`
+        menu.style = `bottom:${spay}px;left:${spax}px`
         if(menu.parentNode){
             menu.parentNode.removeChild(menu);
         }
         menu.onmouseleave = () => rightmenu.outerHTML = '', onmenu = false;
-        menu.innerHTML = `<button>Youtube</button> <button>Twitch</button> <button>Github</button> <button>Instagram</button>`
+        menu.innerHTML = `<button> <img src="./Images/Icons/Youtube.png"> Youtube</button> <button> <img src="./Images/Icons/Twitch_icon.png"> Twitch</button> <button><img src="./Images/Icons/Github.png">Github</button> <button> <img src="./Images/Icons/instagram.png"> Instagram</button>`
         document.body.appendChild(menu)
     }
 }

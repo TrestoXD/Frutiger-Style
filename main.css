@@ -1083,6 +1083,7 @@
     padding-left: 15px;
     padding-right: 15px;
     margin: 2px;
+    image-rendering: pixelated;   
 
 }
 
@@ -1098,9 +1099,28 @@
     white-space: nowrap;
     background-color: #00000000;
     text-align: left;
+    justify-content: center;
+    align-items: center;
+    vertical-align:middle;
+}
+
+#rightmenu > button > img{
+    margin: 0px;
+    padding-right: 5px;
+    width: 32px;
+    image-rendering: pixelated;  
+    justify-content: center;
+    align-items: center; 
+    vertical-align:middle;
+    image-rendering: crisp-edges;
 }
 
 #rightmenu > p:hover {
+    background: #000082;
+    color: white;
+}
+
+#rightmenu > button:hover {
     background: #000082;
     color: white;
 }
