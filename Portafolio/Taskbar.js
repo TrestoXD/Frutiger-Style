@@ -41,3 +41,32 @@ addEventListener("mouseup", (e) => {
     }
 }
 )
+
+//let buttons = document.querySelectorAll(".button-taskbarmenu")
+//
+//buttons.forEach(button =>{
+//    button.addEventListener("mouseenter", (e) => {
+//        const parentoffset = button.getBoundingClientRect();
+//        let relX = e.pageX - parentoffset.left;
+//        let relY = e.pageY - parentoffset.top;
+//        
+//        spax = relY;
+//        spay = relX;
+//        createUIfolder(spax, spay)
+//    })
+//})
+
+function createUIfolder(spax, spay){
+    let rightmenudiv = document.getElementById("rightmenu");
+    if(rightmenudiv === null){
+        let menu = document.createElement("div")
+        menu.id = "rightmenu"
+        menu.style = `top:${spay}px;left:${spax}px`
+        if(menu.parentNode){
+            menu.parentNode.removeChild(menu);
+        }
+        menu.onmouseleave = () => rightmenu.outerHTML = '', onmenu = false;
+        menu.innerHTML = `<button>Youtube</button> <button>Twitch</button> <button>Github</button> <button>Instagram</button>`
+        document.body.appendChild(menu)
+    }
+}

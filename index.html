@@ -12,7 +12,7 @@
         <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos3" style="top: 210px;"><img src="./Images/Icons/w95_16.ico" alt="ordenador" draggable="false"><p>MiOrdenador</p></button>
         <button class="item-papelera" ondblclick="openapp(4,'RE')" id="icos4" style="top: 310px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><p>Resumen</p></button>
         <button class="item-papelera" ondblclick="openapp(5,'PR')" id="icos5" style="top: 410px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><p>Proyectos</p></button>
-        <button class="item-papelera" ondblclick="menuerror('Applicacion no disponible :C ')" id="icos6" style="top: 510px;"><img src="./Images/Icons/w95_70.ico" alt="correo" draggable="false" draggable="false"><p>Correo</p></button>
+        <button class="item-papelera" ondblclick="openapp(6,'CO')" id="icos6" style="top: 510px;"><img src="./Images/Icons/w95_70.ico" alt="correo" draggable="false" draggable="false"><p>Correo</p></button>
         <button class="item-papelera" ondblclick="openapp(0,'WL')" id="icos7" style="top: 610px;"><img src="./Images/Icons/w95_1.ico" alt="bienvenido" draggable="false"><p>Bienvenido .bat</p></button>
         <!-- <div class="item-papelera" id="icos">
             <img src="../Images/Icons/w95_32.ico" alt="papelera" class="itema" draggable="false"><samp class="itema">Papelera de reciclaje</samp>
@@ -37,6 +37,7 @@
                 <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
             </div>
         </div>
+
 
     <!-- Recicle Bin -->
         <div class="content-95 active" style="width: 300px; height: auto;" id="card1">
@@ -71,6 +72,7 @@
             </div>
         </div>
 
+
         <!-- Sobre mi -->
         <div class="content-95 active" style="width: 500px; height: 230px;" id="card2">
             <div class="content-inside-95">
@@ -88,6 +90,7 @@
             </div>
         </div>
 
+
         <!--  Mi ordenador -->
         <div class="content-95 active" style="width: 500px; height: 230px;" id="card3">
             <div class="content-inside-95">
@@ -104,6 +107,7 @@
                 <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
             </div>
         </div>
+
 
         <!-- Resumen -->
         <div class="content-95 active" style="width: 600px; height: auto;" id="card4">
@@ -147,40 +151,70 @@
                     <button class="textrow" onclick="menuerror('Si encuentras un error contactame!')">Help</button>
                 </div>
                 <div class="files-explorer-interior">
-                    <button class="files-explorer-items" ondblclick="window.open('./Documents/Curriculum 2025-2026.pdf', '_blank')"> <img draggable="false" src="./Images/Icons/w95_2.ico"> <p>CurriculumVitae.pdf</p></button>
+                    <button class="files-explorer-items"> <img draggable="false" src="./Images/Icons/w95_4.ico"> <p>Mods</p></button>
+                    <button class="files-explorer-items"> <img draggable="false" src="./Images/Icons/w95_4.ico"> <p>Mods</p></button>
                 </div>
             </div>
         </div>
+
 
     <!-- Correo -->
         <div class="content-95 active" style="width: 500px; height: 230px;" id="card6">
             <div class="content-inside-95">
                 <div class="title-95" id="win6" draggable="false"> 
-                    <h1 draggable="false">Template</h1>
+                    <h1 draggable="false">Correo</h1>
                     <div>
                         <button onclick="showDiv(this), closeWellcome()" draggable="false" id="win6"><img src="./Images/Icons/close.svg" alt="X"  id="win6"></button>
                         <button onclick="showDiv(this), maximize('card6')" draggable="false" id="win6"><img src="./Images/Icons/maximize.svg" alt="O" id="maxi6"></button>
                         <button onclick="showDiv(this), minimize()" draggable="false" id="win6"><img src="./Images/Icons/minimize.svg" alt="-"></button>
                     </div>
                 </div>
-                <h2 class="subtitle-95">Template subtitle!</h2>
-                <hr class="spacing">
-                <p class="text-95">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum, repudiandae voluptates reprehenderit harum ipsum mollitia quam autem maxime. Nam hic animi, cupiditate excepturi ipsam doloribus officiis culpa possimus esse.</p>
+                <div class="inside-row">
+                    <button class="textrow">File</button> 
+                    <button class="textrow">Edit</button> 
+                    <button class="textrow">View</button> 
+                    <button class="textrow">Mail</button>
+                    <button class="textrow" onclick="menuerror('Si encuentras un error contactame!')">Help</button>
+                </div>
+                <div class="inside-row-border">
+                    <button>New Message</button>
+                    <button>Reply to Author</button>
+                    <button>Reply to All</button>
+                    <button>Forward</button>
+                    <button>Send and Recive</button>
+                    <button>Delete</button>
+                </div>
+                <div class="inside-row-border">
+                    <P>Folders</P>
+                    <div class="files-explorer-interior">
+                        <P>Inbox</P>
+                    </div>
+                </div>
+                <div class="files-explorer-interior"></div>
             </div>
         </div>
+
+
     </div>
 </div>
 <!-- TASKBAR -->
 <div id="sidemen" class="overlay_taskbar">
     <div class="content-95" style="width: 200px; height: 400px;" id="card">
         <div class="content-inside-95" style="height: 99.5%;">
-            <div class="windows95-taskbar-menu-title">
-                <img src="./Images/Icons/sidebar95.png" alt="" draggable="false">
+            <div class="Columns">
+                <div class="windows95-taskbar-menu-title">
+                    <img src="./Images/Icons/sidebar95.png" alt="" draggable="false">
+                </div>
+                <div class="windows95-taskbar-menu">
+                    <button onmouseenter="createUIfolder(200,596)"><img src="./Images/Icons/w95_34.ico"><p>Redes Sociales</p><b>></b></button>
+                    <button class="button-taskbarmenu"><img src="./Images/Icons/w95_34.ico"><p>Settings</p><b>></b></button>
+                </div>
             </div>
-            <div class="windows95-taskbar-menu"></div>
         </div>
     </div>
 </div>
+
+
 </body>
 <footer class="footer-95">
     <div>
@@ -199,4 +233,5 @@
     <script src="./Portafolio/Apps.js"></script>
     <script src="./Portafolio/Taskbar.js"></script>
     <script src="./Portafolio/icons.js"></script>
+    <script src="./Portafolio/FileExplorer.js"></script>
 </html>
