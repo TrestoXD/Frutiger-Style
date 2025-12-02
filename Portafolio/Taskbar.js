@@ -48,16 +48,13 @@ addEventListener("mouseup", (e) => {
             meg = false;
             visibletaskbarmenu = false;
             visibletaskbar = false;
-
+            
             //console.log("no");
         }
 
         if(visibletaskbarmenu == false){
-            if(visibletaskbar == false){
-                return;
-            }else{
             taskmenu1.innerHTML = ``
-            taskmenu1.style = `bottom:${-100}px;left:${-100}px`}
+            taskmenu1.style = `bottom:${-100}px;left:${-100}px`
         
     }
 })
