@@ -1,4 +1,7 @@
 let meg;
+let visible;
+let rightmenudiv = document.getElementById("rightmenu");
+let taskmenu1 = document.createElement("div")
 
 if(document.getElementById('sidemen').classList.contains('overlay_taskbar.active')){
     meg = true;
@@ -29,15 +32,24 @@ addEventListener("mouseup", (e) => {
     let current = e.target.getAttribute('class');
     //console.log(current)
 
-    if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png" || e.target.getAttribute("id") === "rightmenu"){
+    if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png" || e.target.getAttribute("id") === "rightmenu" || e.target.getAttribute("class") === "button-taskbar-menu" || e.target.getAttribute("class") === "windows95-taskbar-menu" || e.target.getAttribute("id") === "taskbarmenu" || e.target.getAttribute("id") === "rightmenu1"){
         console.log("si");
+        visible = true
     }else if(e.target.getAttribute('id') == "desktop"){
         console.log("Desktop clicked")
+        visible = false
     }
     else{
+        console.log(e.target.getAttribute('id'))
         document.getElementById('sidemen').classList.remove('active');
         meg = false;
+        visible = false;
+
         //console.log("no");
+    }
+
+    if(visible == false){
+        taskmenu1.innerHTML = ``
     }
 }
 )
@@ -56,17 +68,26 @@ addEventListener("mouseup", (e) => {
 //    })
 //})
 
-function createUIfolder(spax, spay){
-    let rightmenudiv = document.getElementById("rightmenu");
+function createUIfolder(spax, spay, id){
     if(rightmenudiv === null){
-        let menu = document.createElement("div")
-        menu.id = "rightmenu"
-        menu.style = `bottom:${spay}px;left:${spax}px`
-        if(menu.parentNode){
-            menu.parentNode.removeChild(menu);
+        taskmenu1.id = id
+        taskmenu1.style = `bottom:${spay}px;left:${spax}px`
+        if(taskmenu1.parentNode){
+            taskmenu1.parentNode.removeChild(taskmenu1);
         }
-        menu.onmouseleave = () => rightmenu.outerHTML = '', onmenu = false;
-        menu.innerHTML = `<button> <img src="./Images/Icons/Youtube.png"> Youtube</button> <button> <img src="./Images/Icons/Twitch_icon.png"> Twitch</button> <button><img src="./Images/Icons/Github.png">Github</button> <button> <img src="./Images/Icons/instagram.png"> Instagram</button>`
-        document.body.appendChild(menu)
+        taskmenu1.onmouseleave = () => rightmenu.outerHTML = '', onmenu = false;
+        if(id == 'rightmenu'){
+taskmenu1.innerHTML = `<button onclick="window.open('https://www.youtube.com/@Tresto_XD','_blank')" id="rightmenu1"> <img src="./Images/Icons/Youtube.png" id="rightmenu1"> Youtube</button> <button id="rightmenu1" onclick="window.open('https://www.twitch.tv/eltresto_xd','_blank')"> <img src="./Images/Icons/Twitch_icon.png" id="rightmenu1"> Twitch</button> <button id="rightmenu1" onclick="window.open('https://github.com/TrestoXD','_blank')"><img src="./Images/Icons/Github.png" id="rightmenu1">Github</button> <button id="rightmenu1" onclick="window.open('https://www.instagram.com/trestoxd/','_blank')"> <img id="rightmenu1" src="./Images/Icons/instagram.png"> Instagram</button> <button id="rightmenu1" onclick="window.open('https://www.curseforge.com/members/tresto_xd/projects','_blank')"> <img src="./Images/Icons/curseforge.png" id="rightmenu1"> Curseforge</button> <button id="rightmenu1" onclick="window.open('https://modrinth.com/user/TrestoXD', '_blank')"> <img id="rightmenu1" src="./Images/Icons/Modrinth_Logo.png" class="black"> Modnirth </button>`
+        }
+        document.body.appendChild(taskmenu1)
+    }
+}
+
+function deleteUIfolder(id){
+    if(visible == false){
+        taskmenu1.innerHTML = ``
+        taskmenu1.id = ''
+        taskmenu1.outerHTML = ''
+        taskmenu1.style = ``
     }
 }

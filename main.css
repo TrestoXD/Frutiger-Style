@@ -829,8 +829,7 @@
     padding: 0px;
     justify-content: left;
     bottom: 0px;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .windows95-taskbar-menu > button{
@@ -844,7 +843,7 @@
     background-color: #00000000;
     gap: 5px;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .windows95-taskbar-menu > button:hover{
@@ -1115,14 +1114,22 @@
     image-rendering: crisp-edges;
 }
 
+.black{
+    filter: brightness(0);
+}
+
 #rightmenu > p:hover {
     background: #000082;
     color: white;
 }
 
 #rightmenu > button:hover {
-    background: #000082;
     color: white;
+    background: #000082;
+}
+
+#rightmenu button:hover img{
+    filter: invert();
 }
 
 .content-inside-95-error {
