@@ -1,5 +1,6 @@
 let meg;
-let visible;
+let visibletaskbar;
+let visibletaskbarmenu;
 let rightmenudiv = document.getElementById("rightmenu");
 let taskmenu1 = document.createElement("div")
 
@@ -26,35 +27,40 @@ function sidebarmenu(){
 }
 
 addEventListener("mouseup", (e) => {
-    //if(e.target.classList.contains('overlay_taskbar')){
-    //    console.log("Detectado");
-    //}
-    let current = e.target.getAttribute('class');
-    //console.log(current)
+        //if(e.target.classList.contains('overlay_taskbar')){
+        //    console.log("Detectado");
+        //}
+        let current = e.target.getAttribute('class');
+        //console.log(current)
 
-    if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png" || e.target.getAttribute("id") === "rightmenu" || e.target.getAttribute("class") === "button-taskbar-menu" || e.target.getAttribute("class") === "windows95-taskbar-menu" || e.target.getAttribute("id") === "taskbarmenu" || e.target.getAttribute("id") === "rightmenu1"){
-        console.log("si");
-        visible = true
-    }else if(e.target.getAttribute('id') == "desktop"){
-        console.log("Desktop clicked")
-        visible = false
-    }
-    else{
-        console.log(e.target.getAttribute('id'))
-        document.getElementById('sidemen').classList.remove('active');
-        meg = false;
-        visible = false;
+        if(e.target.getAttribute('class') === "content-inside-95" || e.target.getAttribute("class") === "windows95-taskbar-menu-title" || e.target.getAttribute("id") === "buttonstarting" || e.target.getAttribute("src") === "./Images/Icons/sidebar95.png" || e.target.getAttribute("id") === "rightmenu" || e.target.getAttribute("class") === "button-taskbar-menu" || e.target.getAttribute("class") === "windows95-taskbar-menu" || e.target.getAttribute("id") === "taskbarmenu" || e.target.getAttribute("id") === "rightmenu1"){
+            console.log("si");
+            visibletaskbarmenu = true
+            visibletaskbar = true
+        }else if(e.target.getAttribute('id') == "desktop"){
+            console.log("Desktop clicked")
+            visibletaskbarmenu = false
+            visibletaskbar = false;
+        }
+        else{
+            console.log(e.target.getAttribute('id'))
+            document.getElementById('sidemen').classList.remove('active');
+            meg = false;
+            visibletaskbarmenu = false;
+            visibletaskbar = false;
 
-        //console.log("no");
-    }
+            //console.log("no");
+        }
 
-    if(visible == false){
-        taskmenu1.innerHTML = ``
-        taskmenu1.style = `bottom:${-100}px;left:${-100}px`
-        taskmenu1.outerHTML = ``
+        if(visibletaskbarmenu == false){
+            if(visibletaskbar == false){
+                return;
+            }else{
+            taskmenu1.innerHTML = ``
+            taskmenu1.style = `bottom:${-100}px;left:${-100}px`}
+        
     }
-}
-)
+})
 
 //let buttons = document.querySelectorAll(".button-taskbarmenu")
 //
@@ -86,7 +92,7 @@ taskmenu1.innerHTML = `<button onclick="window.open('https://www.youtube.com/@Tr
 }
 
 function deleteUIfolder(id){
-    if(visible == false){
+    if(visibletaskbarmenu == false){
         taskmenu1.innerHTML = ``
         taskmenu1.id = ''
         taskmenu1.outerHTML = ''
