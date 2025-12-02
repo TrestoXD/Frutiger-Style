@@ -50,6 +50,8 @@ addEventListener("mouseup", (e) => {
 
     if(visible == false){
         taskmenu1.innerHTML = ``
+        taskmenu1.style = `bottom:${-100}px;left:${-100}px`
+        taskmenu1.outerHTML = ``
     }
 }
 )
@@ -88,6 +90,6 @@ function deleteUIfolder(id){
         taskmenu1.innerHTML = ``
         taskmenu1.id = ''
         taskmenu1.outerHTML = ''
-        taskmenu1.style = ``
+        taskmenu1.style = `bottom:${-100}px;left:${-100}px`
     }
 }
