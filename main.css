@@ -273,9 +273,10 @@
     font-size: large;
     font-weight: 300;
     font-family: MSSans;
-    padding: 7px;
     text-align: center;
     vertical-align: middle;
+    padding-top: 9px;
+    padding-left: 8px;
 }
 
 .title-95 h1 {
@@ -286,7 +287,8 @@
     font-size: large;
     font-weight: 300;
     font-family: MSSans;
-    padding: 7px
+    padding-top: 9px;
+    padding-left: 8px;
 }
 
 .title-95-act button {
@@ -628,16 +630,25 @@
 
 
 .CMD{
-    position:relative;
-    margin: 5px;
-    padding-top: 2px;
-    height: 87%;
-
-    background-color: #000000;
-    font-family: MSSans;
-    font-size: medium;
-    color: white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-style:solid;
+    border-width: 3px;
+    border-color:#4b4b4b #ffffff #ffffff #4b4b4b;
     
+    margin: 5px;
+    background-color: rgb(0, 0, 0);
+    height: fit-content;
+    width: calc( 100% - 17px);
+    height: calc(100% - 53px);
+    color: white;
+}
+
+.CMD p {
+    color: white;
+    font-family: monospace;
+    font-weight: 100;
 }
 
 .CMD pre{

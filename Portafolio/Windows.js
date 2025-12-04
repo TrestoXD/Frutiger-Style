@@ -6,7 +6,7 @@ let currenttarget;
 let active;
 let currentWindow;
 let enablemoving;
-let totalapp = 6;
+var totalapp = 6;
 let maximze_state;
 
 localStorage.setItem("totalapps", totalapp);
