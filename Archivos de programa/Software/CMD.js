@@ -10,7 +10,7 @@ function opensoftware(id, xcord, ycord, htmlint){
         if(task.parentNode){
             task.parentNode.removeChild(task);
         }
-        task.innerHTML = `<iframe src='Archivos de programa\Software${htmlint}'></iframe>`
-        document.body.appendChild(task)
+        task.innerHTML = `<iframe src='/Archivos de programa/Software/CMD.html'></iframe>`
+        document.body.pare.appendChild(task)
     }
 }
