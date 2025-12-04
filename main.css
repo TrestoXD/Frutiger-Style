@@ -446,8 +446,8 @@
 }
 
 .subtitle-95{
-    margin: 15px;
-    padding: 0;
+    margin: 0;
+    padding: 15px;
 
     color: #000082;
 
@@ -625,6 +625,27 @@
     font-family: MSSans;
     font-size: medium;
 }
+
+
+.CMD{
+    position:relative;
+    margin: 5px;
+    padding-top: 2px;
+    height: 87%;
+
+    background-color: #000000;
+    font-family: MSSans;
+    font-size: medium;
+    color: white;
+    
+}
+
+.CMD pre{
+    white-space: pre;
+    font-family: monospace;
+    color: white;
+}
+
 .butt-95{
     font-size: medium;
     background-color: #00000000;
