@@ -1,5 +1,7 @@
 console.log(totalapp)
 
+console.log(document.body.childNodes)
+
 let task = document.createElement("div")
 
 function opensoftware(id, xcord, ycord, htmlint){
@@ -10,7 +12,7 @@ function opensoftware(id, xcord, ycord, htmlint){
         if(task.parentNode){
             task.parentNode.removeChild(task);
         }
-        task.innerHTML = `<iframe src='/Archivos de programa/Software/CMD.html'></iframe>`
-        document.body.pare.appendChild(task)
+        task.src = `<iframe src='/Archivos de programa/Software/CMD.html'></iframe>`
+        document.body.childNodes.appendChild(task)
     }
 }
