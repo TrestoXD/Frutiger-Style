@@ -13,7 +13,7 @@
         <button class="item-papelera" ondblclick="openapp(4,'RE')" id="icos4" style="top: 310px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><p>Resumen</p></button>
         <button class="item-papelera" ondblclick="openapp(5,'PR')" id="icos5" style="top: 410px;"><img src="./Images/Icons/w95_4.ico" alt="carpeta" draggable="false"><p>Proyectos</p></button>
         <button class="item-papelera" ondblclick="openapp(6,'CO')" id="icos6" style="top: 510px;"><img src="./Images/Icons/w95_70.ico" alt="correo" draggable="false" draggable="false"><p>Correo</p></button>
-        <button class="item-papelera" ondblclick="opensoftware('CMD',100,200, 'CMD')" id="icos7" style="top: 610px;"><img src="./Images/Icons/w95_1.ico" alt="bienvenido" draggable="false"><p>Bienvenido .bat</p></button>
+        <button class="item-papelera" ondblclick="openapp(0,'WL')" id="icos7" style="top: 610px;"><img src="./Images/Icons/w95_1.ico" alt="bienvenido" draggable="false"><p>Bienvenido .bat</p></button>
         <!-- <div class="item-papelera" id="icos">
             <img src="../Images/Icons/w95_32.ico" alt="papelera" class="itema" draggable="false"><samp class="itema">Papelera de reciclaje</samp>
         </div> -->
@@ -161,8 +161,8 @@
                     <button class="textrow">View</button> 
                     <button class="textrow" onclick="menuerror('Si encuentras un error contactame!')">Help</button>
                 </div>
-                <div class="files-explorer-interior">
-                    <button class="files-explorer-items"> <img draggable="false" src="./Images/Icons/w95_4.ico"> <p>Modding</p></button>
+                <div class="files-explorer-interior" id="files-explorer">
+                    <button class="files-explorer-items" ondblclick="ChangeExplorer([['Golden-Client','Smooth-and-Fluid','Karmaland-1-Remake', 'Consistent', 'Its-Harder-Early'],[10,10,10,11,12]])"> <img draggable="false" src="./Images/Icons/w95_4.ico"> <p>Modding</p></button>
                     <button class="files-explorer-items"> <img draggable="false" src="./Images/Icons/w95_4.ico"> <p>Games</p></button>
                 </div>
             </div>
@@ -246,4 +246,5 @@
     <script src="./Portafolio/icons.js"></script>
     <script src="./Portafolio/FileExplorer.js"></script>
     <script src="./Archivos de programa/Software/CMD.js"></script>
-</html>
+    <script src="./Archivos de programa/Software/FileExplorer.js"></script>
+    </html>
