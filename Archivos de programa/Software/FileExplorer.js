@@ -19,7 +19,7 @@ function MountExplorer(arred){
         if(arred[1][i] == 10){
             url = `https://www.curseforge.com/minecraft/modpacks/${arred[0][i]}`
         }else if(arred[1][i] == 11){
-            url = `https://www.curseforge.com/minecraft/texturepacks/${arred[0][i]}`
+            url = `https://www.curseforge.com/minecraft/texture-packs/${arred[0][i]}`
         }else if(arred[1][i] == 11){
             url = `https://www.curseforge.com/minecraft/mc-mods/${arred[0][i]}`
         }

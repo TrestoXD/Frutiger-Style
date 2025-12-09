@@ -1292,6 +1292,7 @@
     text-wrap: wrap;
 }
 .files-explorer-items > img {
+    width: 35px;
     image-rendering: pixelated;   
 }
 .files-explorer-items:hover {
